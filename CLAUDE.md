@@ -47,3 +47,45 @@ modification de layout doit être vérifiée en aperçu d'impression navigateur
 - Ne pas ajouter de dépendance sans justification dans le PR.
 - Ne pas introduire de JS runtime-only qui casserait le prerendering.
 - Ne pas dupliquer du contenu entre composants et fichiers `content/`.
+
+# Git Usage
+
+Use conventional commit format: `<prefix>(<scope>): [<us-id>] <description>`
+
+## Commit Message Prefixes (<prefix>)
+
+- "fix" for bug fixes
+- "feat" for new features
+- "perf" for performance improvements
+- "docs" for documentation changes
+- "style" for formatting changes
+- "refactor" for code refactoring
+- "test" for adding missing tests
+- "chore" for maintenance tasks
+- "revert": reverts a previous commit
+
+## Scopes (<scope>)
+
+Choose the most precise scope in the following tree:
+
+- "global": concerns the whole app
+  - "nav"
+  - "security"
+  - "ci"
+  - "ide"
+    - "vscode"
+    - "webstorm"
+    - "claude"
+
+If no scope apply, create a new one and add it to the list.
+
+## User Story ID (<us-id>)
+
+The part `[<us-id>]` is optional and appears only if you know the US-ID for the current work.
+
+## Rules
+
+- Use lowercase for commit messages
+- Keep the summary line concise
+- Include description for non-obvious changes, and keep it concise
+- Reference issue numbers when applicable
