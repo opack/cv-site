@@ -38,7 +38,7 @@
 </script>
 
 <article
-	class="group relative rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md print-avoid-break md:p-6"
+	class="group relative rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md md:p-6"
 >
 	<div class="absolute left-0 top-5 bottom-5 w-1 rounded-r bg-[var(--color-teal-primary)]"></div>
 
