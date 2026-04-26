@@ -4,7 +4,7 @@ export const meta: Meta = {
 	identity: {
 		firstName: 'Didier',
 		lastName: 'Demange',
-		title: 'Tech Lead / Senior Dev Front',
+		title: 'Tech Lead / Senior Dev Fullstack',
 		tagline: 'workflow IA-first',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
@@ -30,7 +30,7 @@ export const meta: Meta = {
 		},
 		{
 			label: 'Formation & transmission',
-			description: 'Montée en compétence des devs, documentation, présentations, pair programming'
+			description: 'Montée en compétence des devs, documentation, présentations'
 		}
 	],
 	stack: [
@@ -51,7 +51,7 @@ export const meta: Meta = {
 		},
 		{
 			label: 'Back-end & data',
-			items: ['Node.js', 'Supabase', 'PostgreSQL', 'Java / Spring Boot (legacy)']
+			items: ['Node.js', 'Firebase', 'Supabase', 'PostgreSQL', 'Java / Spring Boot (legacy)']
 		},
 		{
 			label: 'DevOps & outillage',
@@ -67,7 +67,7 @@ export const meta: Meta = {
 		},
 		{
 			label: 'Méthodes',
-			items: ['TDD', 'Scrum', 'revue de code', 'pair programming']
+			items: ['TDD', 'Scrum', 'revue de code']
 		}
 	],
 	formations: [

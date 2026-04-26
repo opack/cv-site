@@ -1,10 +1,10 @@
 <script lang="ts">
+	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
-	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-	import { Dices, Gamepad2, Piano, Guitar, Lightbulb } from 'lucide-svelte';
-	import type { ComponentType } from 'svelte';
 	import type { HobbyIcon } from '$lib/types';
+	import { Dices, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte';
+	import type { ComponentType } from 'svelte';
 	import type { PageData } from './$types';
 
 	type Props = { data: PageData };
@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Didier Demange — Tech Lead / Senior Dev Front</title>
+	<title>Didier Demange — Tech Lead / Senior Dev Fullstack</title>
 </svelte:head>
 
 <main class="mx-auto max-w-[860px] px-4 py-8 print:px-0 print:py-0 md:px-6 md:py-10">
