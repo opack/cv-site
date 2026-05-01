@@ -104,7 +104,13 @@
 	main {
 		max-width: none !important;
 		margin: 0 !important;
-		padding: 0 !important;
+		/* Coussin horizontal pour le print : sans cela, la bordure droite des boîtes
+		   calées sur la limite de @page est rognée par l'arrondi sous-pixel du moteur
+		   PDF. 3px (et non 1px) pour laisser respirer le `box-shadow` des cartes
+		   (blur 2px) : sinon l'ombre est tranchée net contre la limite imprimable,
+		   ce qui supprime l'ombre côté droit et dessine une fine ligne verticale
+		   continue le long de la pile de cartes Expériences (effet de "cadre"). */
+		padding: 0 3px !important;
 	}
 
 	/* Le viewport print est < breakpoint md (~768px) : on rejoue le layout desktop. */
@@ -158,14 +164,13 @@
 
 	/* Cartes : on conserve la personnalité web (coins arrondis, ombre légère)
 	   pour que le PDF soit cohérent avec le site. Padding modéré pour rester
-	   lisible sans exploser la pagination. */
-	section,
-	article {
-		box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.08) !important;
-		border-radius: 10px !important;
-	}
+	   lisible sans exploser la pagination. Scope `.bg-white` pour ne pas
+	   dessiner un rectangle fantôme autour des sections-wrappers sans fond ni
+	   bordure (ex. la section "Expériences professionnelles"). */
 	section.bg-white,
 	article.bg-white {
+		box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.08) !important;
+		border-radius: 10px !important;
 		padding: 3mm 4mm !important;
 	}
 
@@ -178,7 +183,7 @@
 	.mb-4.flex.items-baseline {
 		break-after: avoid-page !important;
 		page-break-after: avoid !important;
-		margin-bottom: 1.5mm !important;
+		margin-bottom: 2.5mm !important;
 	}
 	/* Les cartes d'expérience peuvent se couper entre pages (les plus longues
 	   dépassent une page utile). On protège juste le header (titre + entreprise
@@ -213,7 +218,7 @@
 	.space-y-2\.5 > * + * { margin-top: 0.8mm !important; }
 	.space-y-2 > * + * { margin-top: 0.6mm !important; }
 
-	.mb-3 { margin-bottom: 1mm !important; }
+	.mb-3 { margin-bottom: 2mm !important; }
 	.mt-5 { margin-top: 2mm !important; }
 	.mt-4 { margin-top: 1.5mm !important; }
 	.mt-3 { margin-top: 1mm !important; }
