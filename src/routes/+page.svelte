@@ -25,7 +25,7 @@
 	<title>Didier Demange — Tech Lead / Senior Dev Fullstack</title>
 </svelte:head>
 
-<main class="mx-auto max-w-[860px] px-4 py-8 print:px-0 print:py-0 md:px-6 md:py-10">
+<main class="mx-auto max-w-215 px-4 py-8 print:px-0 print:py-0 md:px-6 md:py-10">
 	<Header identity={data.meta.identity} />
 
 	<section class="mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break md:p-7">
@@ -57,7 +57,7 @@
 						<div class="mt-1 flex flex-wrap gap-1.5">
 							{#each group.items as item (item)}
 								<span
-									class="rounded bg-[var(--color-teal-soft)] px-2 py-0.5 text-xs text-[var(--color-teal-dark)]"
+									class="rounded bg-teal-soft px-2 py-0.5 text-xs text-teal-dark"
 									>{item}</span
 								>
 							{/each}
@@ -83,7 +83,7 @@
 			<ul class="space-y-2.5 text-sm text-slate-700">
 				{#each data.meta.formations as f (`${f.year}-${f.title}`)}
 					<li class="flex gap-3">
-						<span class="w-12 shrink-0 font-semibold text-[var(--color-teal-dark)]">{f.year}</span>
+						<span class="w-12 shrink-0 font-semibold text-teal-dark">{f.year}</span>
 						<span>
 							<span class="font-medium text-slate-900">{f.title}</span>
 							{#if f.provider}
@@ -106,7 +106,7 @@
 			<ul class="space-y-2.5 text-sm text-slate-700">
 				{#each data.meta.diplomas as d (`${d.year}-${d.title}`)}
 					<li class="flex gap-3">
-						<span class="w-12 shrink-0 font-semibold text-[var(--color-teal-dark)]">{d.year}</span>
+						<span class="w-12 shrink-0 font-semibold text-teal-dark">{d.year}</span>
 						<span>
 							<span class="font-medium text-slate-900">{d.title}</span>
 							{#if d.school}
@@ -143,7 +143,7 @@
 						{@const Icon = hobbyIcons[hobby.icon]}
 						<li class="flex flex-col items-center gap-1.5 text-center">
 							<span
-								class="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-teal-soft)] text-[var(--color-teal-dark)]"
+								class="flex h-11 w-11 items-center justify-center rounded-full bg-teal-soft text-teal-dark"
 							>
 								<Icon class="h-5 w-5" aria-hidden="true" />
 							</span>
