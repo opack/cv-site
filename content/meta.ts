@@ -10,8 +10,12 @@ export const meta: Meta = {
 		phone: '06 24 47 82 44',
 		location: 'Basé en France · full remote privilégié · mobilité ponctuelle possible',
 		links: [
-			{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/didier-demange/' },
-			{ label: 'GitHub', url: 'https://github.com/opack' }
+			{
+				label: 'LinkedIn',
+				url: 'https://www.linkedin.com/in/didier-demange/',
+				handle: 'didier-demange'
+			},
+			{ label: 'GitHub', url: 'https://github.com/opack', handle: 'opack' }
 		]
 	},
 	competences: [

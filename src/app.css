@@ -72,6 +72,16 @@
 	}
 }
 
+/* Éléments réservés à l'impression : masqués à l'écran. On scope la règle à
+   `@media screen` pour ne pas avoir à forcer un display en print qui écraserait
+   les classes Tailwind (ex. un `<p class="print-only flex justify-center">` doit
+   conserver son flex en print). */
+@media screen {
+	.print-only {
+		display: none;
+	}
+}
+
 /* Print styles: clean A4 export via Ctrl+P
  * À l'impression, le viewport effectif (A4, marges comprises) est sous le
  * breakpoint `md` de Tailwind. On rejoue donc explicitement ici les règles
@@ -123,7 +133,11 @@
 		flex-direction: row !important;
 		align-items: center !important;
 		gap: 5mm !important;
-		padding: 4mm 6mm !important;
+		/* Padding bas légèrement supérieur au haut pour compenser l'asymétrie optique :
+		   le « T » de h1 sit au sommet de sa boîte de ligne (cap-height haute, peu de
+		   demi-leading apparent), tandis que les descendantes (« p » de « privilégié »
+		   en localisation) réduisent l'espace ressenti en bas de ~5-7px. */
+		padding: 6mm 6mm 7.5mm 6mm !important;
 	}
 	/* Cercles décoratifs flous : le flou ne rend pas bien en impression et
 	   les cercles deviennent opaques — on les masque. */
@@ -156,10 +170,20 @@
 		color: #ffffff !important;
 		opacity: 1 !important;
 	}
+	/* Espacement entre les blocs du header (titre/sous-titre, coordonnées, localisation) :
+	   les overrides globaux .mt-5/.mt-4 plus bas sont calibrés pour les sections compactes
+	   du corps du CV ; dans le header on veut retrouver le rythme aéré du web pour bien
+	   séparer les blocs. */
+	header .mt-5 {
+		margin-top: 5mm !important;
+	}
+	header .mt-4 {
+		margin-top: 3.5mm !important;
+	}
 
 	/* Rythme vertical entre sections racines. */
 	main > * + * {
-		margin-top: 3mm !important;
+		margin-top: 4mm !important;
 	}
 
 	/* Cartes : on conserve la personnalité web (coins arrondis, ombre légère)
@@ -171,7 +195,7 @@
 	article.bg-white {
 		box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.08) !important;
 		border-radius: 10px !important;
-		padding: 3mm 4mm !important;
+		padding: 4mm 5mm !important;
 	}
 
 	/* Titres de section : on empêche l'orphelinage (ex. "Expériences pro." seul en fin de page). */
@@ -203,26 +227,60 @@
 	article h3 {
 		font-size: 10.5pt !important;
 	}
-	.prose-cv p { margin-bottom: 1mm !important; line-height: 1.5 !important; }
-	.prose-cv ul li { margin-bottom: 0.9mm !important; line-height: 1.5 !important; }
-	.prose-cv ul li::before { top: 0.55rem !important; }
+	.prose-cv p {
+		margin-bottom: 1.5mm !important;
+		line-height: 1.5 !important;
+	}
+	.prose-cv ul li {
+		margin-bottom: 1.3mm !important;
+		line-height: 1.5 !important;
+	}
+	.prose-cv ul li::before {
+		top: 0.55rem !important;
+	}
 
 	/* Espacements internes réduits. */
-	.gap-6 { gap: 2mm !important; }
-	.gap-5 { gap: 1.5mm !important; }
-	.gap-4 { gap: 1.5mm !important; }
-	.gap-3 { gap: 1mm !important; }
+	.gap-6 {
+		gap: 2mm !important;
+	}
+	.gap-5 {
+		gap: 1.5mm !important;
+	}
+	.gap-4 {
+		gap: 1.5mm !important;
+	}
+	.gap-3 {
+		gap: 1mm !important;
+	}
 
-	.space-y-5 > * + * { margin-top: 1.5mm !important; }
-	.space-y-3 > * + * { margin-top: 1mm !important; }
-	.space-y-2\.5 > * + * { margin-top: 0.8mm !important; }
-	.space-y-2 > * + * { margin-top: 0.6mm !important; }
+	.space-y-5 > * + * {
+		margin-top: 2.2mm !important;
+	}
+	.space-y-3 > * + * {
+		margin-top: 1.5mm !important;
+	}
+	.space-y-2\.5 > * + * {
+		margin-top: 1.2mm !important;
+	}
+	.space-y-2 > * + * {
+		margin-top: 0.9mm !important;
+	}
 
-	.mb-3 { margin-bottom: 2mm !important; }
-	.mt-5 { margin-top: 2mm !important; }
-	.mt-4 { margin-top: 1.5mm !important; }
-	.mt-3 { margin-top: 1mm !important; }
-	.mt-1 { margin-top: 0.4mm !important; }
+	.mb-3 {
+		margin-bottom: 2mm !important;
+	}
+	.mt-5 {
+		margin-top: 2mm !important;
+	}
+	.mt-4 {
+		margin-top: 1.5mm !important;
+	}
+	.mt-3 {
+		margin-top: 1mm !important;
+	}
+	.mt-1 {
+		margin-top: 0.4mm !important;
+	}
 
 	.no-print {
 		display: none !important;

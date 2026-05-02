@@ -3,9 +3,17 @@
 	import Header from '$lib/components/Header.svelte';
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import type { HobbyIcon } from '$lib/types';
-	import { Dices, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte';
+	import {
+		Dices,
+		ExternalLink,
+		Gamepad2,
+		Guitar,
+		Lightbulb,
+		Piano
+	} from 'lucide-svelte';
 	import type { ComponentType } from 'svelte';
 	import type { PageData } from './$types';
+
 
 	type Props = { data: PageData };
 	let { data }: Props = $props();
@@ -154,6 +162,19 @@
 			</section>
 		{/if}
 	</div>
+
+	<p class="print-only mt-6 flex items-center justify-center gap-1 text-[9pt] text-slate-500 italic">
+		<span>Document généré depuis la version en ligne</span>
+		<a
+			href="https://demange.noatis.fr"
+			target="_blank"
+			rel="noopener"
+			class="inline-flex items-center gap-0.5"
+		>
+			demange.noatis.fr
+			<ExternalLink class="h-3 w-3" strokeWidth={2.5} aria-hidden="true" />
+		</a>
+	</p>
 
 	<footer class="no-print mt-12 text-center text-xs text-slate-400">
 		<p>Site construit en SvelteKit 2 · Svelte 5 · Tailwind CSS 4</p>

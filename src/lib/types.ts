@@ -3,7 +3,8 @@ import { z } from 'zod';
 /** Link shape used in headers, experiences, etc. */
 export const linkSchema = z.object({
 	label: z.string().min(1),
-	url: z.string().url()
+	url: z.string().url(),
+	handle: z.string().min(1).optional()
 });
 export type Link = z.infer<typeof linkSchema>;
 

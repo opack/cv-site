@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
-	import { Link as LinkIcon } from 'lucide-svelte';
+	import { ExternalLink } from 'lucide-svelte';
 	import type { ExperienceFrontmatter } from '$lib/types';
 
 	type Props = {
@@ -82,8 +82,8 @@
 					rel="noopener"
 					class="inline-flex items-center gap-1 rounded-full border border-teal-primary/40 bg-teal-soft px-3 py-0.5 text-xs font-medium text-teal-dark hover:bg-teal-primary/15"
 				>
-					<LinkIcon class="h-3 w-3" strokeWidth={2.5} aria-hidden="true" />
 					{link.label}
+					<ExternalLink class="h-3 w-3" strokeWidth={2.5} aria-hidden="true" />
 				</a>
 			{/each}
 		</div>

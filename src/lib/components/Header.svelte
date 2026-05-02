@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Mail, Phone, Link as LinkIcon } from 'lucide-svelte';
 	import type { Meta } from '$lib/types';
+	import { Link as LinkIcon, Mail, Phone } from 'lucide-svelte';
 
 	type Props = { identity: Meta['identity'] };
 	let { identity }: Props = $props();
@@ -26,12 +26,12 @@
 		<div class="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-white/20 blur-3xl"></div>
 	</div>
 
-	<div class="relative flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-10 md:p-10">
+	<div class="relative flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-8 md:px-8 md:py-10">
 		<div
 			class="flex h-28 w-28 shrink-0 flex-col items-center justify-center rounded-full border-4 border-white/60 bg-white/10 text-center shadow-inner backdrop-blur-sm md:h-32 md:w-32"
 		>
-			<div class="text-xl leading-tight font-semibold tracking-tight md:text-2xl">{identity.firstName}</div>
-			<div class="text-xl leading-tight font-semibold tracking-tight md:text-2xl">{identity.lastName}</div>
+			<div class="text-xl leading-none font-semibold tracking-tight md:text-2xl">{identity.firstName}</div>
+			<div class="text-xl leading-none font-semibold tracking-tight md:text-2xl">{identity.lastName}</div>
 		</div>
 
 		<div class="min-w-0 flex-1">
@@ -42,7 +42,7 @@
 				{/if}
 			</h1>
 
-			<div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+			<div class="mt-5 grid grid-cols-1 gap-x-4 gap-y-2 text-sm sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center">
 				<span class="flex items-center gap-2">
 					<Mail class="h-4 w-4 opacity-80" aria-hidden="true" />
 					<a class="underline-offset-2 hover:underline" href={`mailto:${identity.email}`}>{identity.email}</a>
@@ -54,11 +54,11 @@
 				{#each identity.links as link (link.url)}
 					{@const brand = brandFor(link.url)}
 					<a
-						class="inline-flex items-center gap-1.5 opacity-90 hover:opacity-100"
+						class="inline-flex items-center gap-2 opacity-90 underline-offset-2 hover:underline hover:opacity-100"
 						href={link.url}
 						rel="noopener"
 						target="_blank"
-						aria-label={link.label}
+						aria-label={`${link.label} — ${link.handle ?? link.label}`}
 						title={link.label}
 					>
 						{#if brand === 'linkedin'}
@@ -71,8 +71,8 @@
 							</svg>
 						{:else}
 							<LinkIcon class="h-4 w-4 opacity-80" aria-hidden="true" />
-							<span class="underline-offset-2 hover:underline">{link.label}</span>
 						{/if}
+						<span>{link.handle ?? link.label}</span>
 					</a>
 				{/each}
 			</div>
