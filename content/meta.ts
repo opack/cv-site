@@ -26,7 +26,7 @@ export const meta: Meta = {
 		{
 			label: 'Workflow IA-first',
 			description:
-				"Orchestration d'agents Claude Code, plan mode + Opus, parallélisation, skills custom, CLAUDE.md comme référentiel architectural vivant"
+				"Orchestration d'agents Claude Code, plan mode + Opus, parallélisation, commandes, skills custom, CLAUDE.md comme référentiel architectural vivant"
 		},
 		{
 			label: 'Leadership technique',
@@ -64,7 +64,7 @@ export const meta: Meta = {
 		{
 			label: 'IA',
 			items: [
-				'Claude Code (Opus, plan mode, agents parallèles, skills custom)',
+				'Claude Code (Opus, plan mode, agents parallèles, commandes, skills custom)',
 				'workflow spec-first',
 				'CLAUDE.md architecture'
 			]
@@ -82,8 +82,13 @@ export const meta: Meta = {
 		},
 		{
 			year: '2025',
-			title: 'Vue & Quasar',
+			title: 'Vue 3 & Quasar 2',
 			provider: 'Make Apps Academy'
+		},
+		{
+			year: '2025',
+			title: 'Vue 3',
+			note: 'autoformation structurée*'
 		},
 		{
 			year: '2024',
