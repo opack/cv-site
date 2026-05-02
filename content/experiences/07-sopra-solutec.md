@@ -8,5 +8,5 @@ subtitle: Premiers pas professionnels en SSII, sur des applications métier dans
 tags: [Java, J2EE, SSO, AJAX]
 ---
 
-- **Solutec chez BNP Paribas (09/2008 — 07/2009)** — Maintenance et évolution d'une application bancaire : SSO (Site Minder), AJAX, Java
-- **Sopra Group chez AFPA (10/2007 — 09/2008)** — Maintenance évolutive d'applications métier
+- **Solutec chez BNP Paribas (09/2008 - 07/2009)** : Maintenance et évolution d'une application bancaire : SSO (Site Minder), AJAX, Java
+- **Sopra Group chez AFPA (10/2007 - 09/2008)** : Maintenance évolutive d'applications métier

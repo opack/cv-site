@@ -33,7 +33,7 @@
 	}
 
 	const dateRange = $derived(
-		`${formatDate(frontmatter.dateStart)} — ${formatDate(frontmatter.dateEnd) || 'présent'}`
+		`${formatDate(frontmatter.dateStart)} - ${formatDate(frontmatter.dateEnd) || 'présent'}`
 	);
 </script>
 

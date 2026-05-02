@@ -38,7 +38,7 @@
 			<h1 class="text-2xl leading-tight font-semibold md:text-3xl">
 				{identity.title}
 				{#if identity.tagline}
-					<span class="block text-lg font-normal text-white/85 md:text-xl">— {identity.tagline}</span>
+					<span class="block text-lg font-normal text-white/85 md:text-xl">{identity.tagline}</span>
 				{/if}
 			</h1>
 

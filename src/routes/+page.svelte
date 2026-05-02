@@ -128,7 +128,7 @@
 			<ul class="space-y-2 text-sm text-slate-700">
 				{#each data.meta.langues as l (l.label)}
 					<li>
-						<span class="font-semibold text-slate-900">{l.label}</span> —
+						<span class="font-semibold text-slate-900">{l.label}</span> :
 						<span class="text-slate-600">{l.level}</span>
 					</li>
 				{/each}
@@ -156,9 +156,6 @@
 	</div>
 
 	<footer class="no-print mt-12 text-center text-xs text-slate-400">
-		<p>
-			Site construit en SvelteKit 2 · Svelte 5 · Tailwind CSS 4 — source sur
-			<a class="underline hover:text-slate-600" href="https://github.com/opack" target="_blank" rel="noopener">github.com/opack</a>
-		</p>
+		<p>Site construit en SvelteKit 2 · Svelte 5 · Tailwind CSS 4</p>
 	</footer>
 </main>
