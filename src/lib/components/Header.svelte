@@ -1,22 +1,22 @@
 <script lang="ts">
-	import type { Meta } from '$lib/types';
-	import { Link as LinkIcon, Mail, Phone } from 'lucide-svelte';
+	import type { Meta } from '$lib/types'
+	import { Link as LinkIcon, Mail, Phone } from 'lucide-svelte'
 
-	type Props = { identity: Meta['identity'] };
-	let { identity }: Props = $props();
+	type Props = { identity: Meta['identity'] }
+	let { identity }: Props = $props()
 
-	const fullName = $derived(`${identity.firstName} ${identity.lastName}`);
+	const fullName = $derived(`${identity.firstName} ${identity.lastName}`)
 
-	type Brand = 'linkedin' | 'github' | 'generic';
+	type Brand = 'linkedin' | 'github' | 'generic'
 	function brandFor(url: string): Brand {
 		try {
-			const host = new URL(url).hostname;
-			if (host.includes('linkedin.com')) return 'linkedin';
-			if (host.includes('github.com')) return 'github';
+			const host = new URL(url).hostname
+			if (host.includes('linkedin.com')) return 'linkedin'
+			if (host.includes('github.com')) return 'github'
 		} catch {
 			/* URL malformée — le schéma Zod l'empêche en théorie */
 		}
-		return 'generic';
+		return 'generic'
 	}
 </script>
 

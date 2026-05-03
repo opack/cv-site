@@ -1,4 +1,4 @@
-import type { Meta } from '$lib/types';
+import type { Meta } from '$lib/types'
 
 export const meta: Meta = {
 	identity: {
@@ -141,4 +141,4 @@ export const meta: Meta = {
 		{ label: 'Guitare', icon: 'guitar' },
 		{ label: 'Prototypage d’applis', icon: 'prototyping' }
 	]
-};
+}

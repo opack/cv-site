@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { Component } from 'svelte';
-	import { ExternalLink } from 'lucide-svelte';
-	import type { ExperienceFrontmatter } from '$lib/types';
+	import type { Component } from 'svelte'
+	import { ExternalLink } from 'lucide-svelte'
+	import type { ExperienceFrontmatter } from '$lib/types'
 
 	type Props = {
-		frontmatter: ExperienceFrontmatter;
-		body: Component;
-	};
-	let { frontmatter, body: Body }: Props = $props();
+		frontmatter: ExperienceFrontmatter
+		body: Component
+	}
+	let { frontmatter, body: Body }: Props = $props()
 
 	const monthLabels = [
 		'janv.',
@@ -22,19 +22,19 @@
 		'oct.',
 		'nov.',
 		'déc.'
-	];
+	]
 
 	function formatDate(d: string | null | undefined): string {
-		if (!d) return '';
-		if (d === 'present') return 'présent';
-		const [y, m] = d.split('-');
-		const month = monthLabels[Number(m) - 1] ?? '';
-		return `${month} ${y}`;
+		if (!d) return ''
+		if (d === 'present') return 'présent'
+		const [y, m] = d.split('-')
+		const month = monthLabels[Number(m) - 1] ?? ''
+		return `${month} ${y}`
 	}
 
 	const dateRange = $derived(
 		`${formatDate(frontmatter.dateStart)} - ${formatDate(frontmatter.dateEnd) || 'présent'}`
-	);
+	)
 </script>
 
 <article

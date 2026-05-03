@@ -1,16 +1,16 @@
 <script lang="ts">
-	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-	import Header from '$lib/components/Header.svelte';
-	import SectionTitle from '$lib/components/SectionTitle.svelte';
-	import type { HobbyIcon } from '$lib/types';
-	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte';
-	import type { ComponentType } from 'svelte';
-	import type { PageData } from './$types';
+	import ExperienceCard from '$lib/components/ExperienceCard.svelte'
+	import Header from '$lib/components/Header.svelte'
+	import SectionTitle from '$lib/components/SectionTitle.svelte'
+	import type { HobbyIcon } from '$lib/types'
+	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte'
+	import type { ComponentType } from 'svelte'
+	import type { PageData } from './$types'
 
-	type Props = { data: PageData };
-	let { data }: Props = $props();
+	type Props = { data: PageData }
+	let { data }: Props = $props()
 
-	const Profile = $derived(data.profile.component);
+	const Profile = $derived(data.profile.component)
 
 	const hobbyIcons: Record<HobbyIcon, ComponentType> = {
 		boardgame: Dices,
@@ -18,7 +18,7 @@
 		piano: Piano,
 		guitar: Guitar,
 		prototyping: Lightbulb
-	};
+	}
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
-import adapter from '@sveltejs/adapter-netlify';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { mdsvex } from 'mdsvex';
+import adapter from '@sveltejs/adapter-netlify'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { mdsvex } from 'mdsvex'
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.svx', '.md'],
@@ -15,6 +15,6 @@ const config = {
 			extensions: ['.svx', '.md']
 		})
 	]
-};
+}
 
-export default config;
+export default config

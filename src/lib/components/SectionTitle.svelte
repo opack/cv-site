@@ -1,6 +1,6 @@
 <script lang="ts">
-	type Props = { title: string; subtitle?: string };
-	let { title, subtitle }: Props = $props();
+	type Props = { title: string; subtitle?: string }
+	let { title, subtitle }: Props = $props()
 </script>
 
 <div class="print-avoid-break mb-4 flex items-baseline gap-3">
