@@ -115,14 +115,16 @@ export const meta: Meta = {
 			note: 'en alternance chez CEDIP Infrared Systems (77)'
 		},
 		{
+			year: '2005',
+			title: 'First Certificate of English (FCE), grade B',
+			school: 'Ingénieurs 2000 (77)',
+			note: 'Évalué et délivré par University of Cambridge'
+		},
+		{
 			year: '2004',
 			title: 'DUT Informatique, option Génie Logiciel',
 			school: 'IUT de Montreuil (93)',
 			note: 'en alternance chez CEDIP Infrared Systems (77)'
-		},
-		{
-			year: '2004',
-			title: 'First Certificate of English (FCE), grade B'
 		}
 	],
 	langues: [
