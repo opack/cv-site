@@ -66,13 +66,7 @@ export const langueSchema = z.object({
 });
 export type Langue = z.infer<typeof langueSchema>;
 
-export const hobbyIconSchema = z.enum([
-	'boardgame',
-	'videogame',
-	'piano',
-	'guitar',
-	'prototyping'
-]);
+export const hobbyIconSchema = z.enum(['boardgame', 'videogame', 'piano', 'guitar', 'prototyping']);
 export type HobbyIcon = z.infer<typeof hobbyIconSchema>;
 
 export const hobbySchema = z.object({

@@ -3,17 +3,9 @@
 	import Header from '$lib/components/Header.svelte';
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import type { HobbyIcon } from '$lib/types';
-	import {
-		Dices,
-		ExternalLink,
-		Gamepad2,
-		Guitar,
-		Lightbulb,
-		Piano
-	} from 'lucide-svelte';
+	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte';
 	import type { ComponentType } from 'svelte';
 	import type { PageData } from './$types';
-
 
 	type Props = { data: PageData };
 	let { data }: Props = $props();
@@ -33,10 +25,12 @@
 	<title>Didier Demange — Tech Lead / Senior Dev Fullstack</title>
 </svelte:head>
 
-<main class="mx-auto max-w-215 px-4 py-8 print:px-0 print:py-0 md:px-6 md:py-10">
+<main class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0">
 	<Header identity={data.meta.identity} />
 
-	<section class="mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break md:p-7">
+	<section
+		class="print-avoid-break mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm md:p-7"
+	>
 		<SectionTitle title="Profil" />
 		<div class="prose-cv text-sm leading-relaxed text-slate-700 md:text-[15px]">
 			<Profile />
@@ -44,7 +38,7 @@
 	</section>
 
 	<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-		<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Compétences clés" />
 			<ul class="space-y-3">
 				{#each data.meta.competences as comp (comp.label)}
@@ -56,7 +50,7 @@
 			</ul>
 		</section>
 
-		<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Stack" />
 			<ul class="space-y-3">
 				{#each data.meta.stack as group (group.label)}
@@ -64,10 +58,7 @@
 						<span class="block text-sm font-semibold text-slate-900">{group.label}</span>
 						<div class="mt-1 flex flex-wrap gap-1.5">
 							{#each group.items as item (item)}
-								<span
-									class="rounded bg-teal-soft px-2 py-0.5 text-xs text-teal-dark"
-									>{item}</span
-								>
+								<span class="rounded bg-teal-soft px-2 py-0.5 text-xs text-teal-dark">{item}</span>
 							{/each}
 						</div>
 					</li>
@@ -86,7 +77,7 @@
 	</section>
 
 	<div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-		<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Formations récentes" />
 			<ul class="space-y-2.5 text-sm text-slate-700">
 				{#each data.meta.formations as f (`${f.year}-${f.title}`)}
@@ -109,7 +100,7 @@
 			</p>
 		</section>
 
-		<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Diplômes" />
 			<ul class="space-y-2.5 text-sm text-slate-700">
 				{#each data.meta.diplomas as d (`${d.year}-${d.title}`)}
@@ -131,7 +122,7 @@
 	</div>
 
 	<div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-		<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Langues" />
 			<ul class="space-y-2 text-sm text-slate-700">
 				{#each data.meta.langues as l (l.label)}
@@ -144,7 +135,7 @@
 		</section>
 
 		{#if data.meta.hobbies && data.meta.hobbies.length > 0}
-			<section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm print-avoid-break">
+			<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 				<SectionTitle title="Temps libre" />
 				<ul class="grid grid-cols-3 gap-3 sm:grid-cols-5">
 					{#each data.meta.hobbies as hobby (hobby.icon)}
@@ -163,7 +154,9 @@
 		{/if}
 	</div>
 
-	<p class="print-only mt-6 flex items-center justify-center gap-1 text-[9pt] text-slate-500 italic">
+	<p
+		class="print-only mt-6 flex items-center justify-center gap-1 text-[9pt] text-slate-500 italic"
+	>
 		<span>Document généré depuis la version en ligne</span>
 		<a
 			href="https://demange.noatis.fr"

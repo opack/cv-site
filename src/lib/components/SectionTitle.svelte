@@ -3,7 +3,7 @@
 	let { title, subtitle }: Props = $props();
 </script>
 
-<div class="mb-4 flex items-baseline gap-3 print-avoid-break">
+<div class="print-avoid-break mb-4 flex items-baseline gap-3">
 	<h2 class="text-xl font-semibold tracking-tight" style="color: var(--color-teal-dark)">
 		{title}
 	</h2>
