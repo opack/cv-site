@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Didier Demange — Tech Lead / Senior Dev Fullstack</title>
+	<title>Didier Demange - Tech Lead / Senior Dev Fullstack</title>
 </svelte:head>
 
 <main class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0">

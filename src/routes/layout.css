@@ -141,7 +141,7 @@
 		padding: 6mm 6mm 7.5mm 6mm !important;
 	}
 	/* Cercles décoratifs flous : le flou ne rend pas bien en impression et
-	   les cercles deviennent opaques — on les masque. */
+	   les cercles deviennent opaques donc on les masque. */
 	header .pointer-events-none {
 		display: none !important;
 	}

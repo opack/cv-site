@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Component } from 'svelte'
-	import { ExternalLink } from 'lucide-svelte'
 	import type { ExperienceFrontmatter } from '$lib/types'
+	import { ExternalLink } from 'lucide-svelte'
+	import type { Component } from 'svelte'
 
 	type Props = {
 		frontmatter: ExperienceFrontmatter
@@ -48,7 +48,7 @@
 		<div class="min-w-0">
 			<h3 class="text-base font-semibold text-slate-900 md:text-lg">
 				{frontmatter.title}
-				<span class="font-normal text-slate-400"> — </span>
+				<span class="font-normal text-slate-400"> - </span>
 				{#if frontmatter.companyUrl}
 					<a
 						href={frontmatter.companyUrl}

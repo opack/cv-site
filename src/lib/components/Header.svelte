@@ -14,7 +14,7 @@
 			if (host.includes('linkedin.com')) return 'linkedin'
 			if (host.includes('github.com')) return 'github'
 		} catch {
-			/* URL malformée — le schéma Zod l'empêche en théorie */
+			/* URL malformée : le schéma Zod l'empêche en théorie */
 		}
 		return 'generic'
 	}
@@ -71,7 +71,7 @@
 						href={link.url}
 						rel="noopener external"
 						target="_blank"
-						aria-label={`${link.label} — ${link.handle ?? link.label}`}
+						aria-label={`${link.label} ${link.handle ?? link.label}`}
 						title={link.label}
 					>
 						{#if brand === 'linkedin'}

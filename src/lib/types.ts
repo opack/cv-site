@@ -31,7 +31,7 @@ export interface Experience extends ExperienceFrontmatter {
 	slug: string
 }
 
-/** Skill / stack / formation / diploma / language entry — YAML-backed */
+/** Skill / stack / formation / diploma / language entry */
 export const skillGroupSchema = z.object({
 	label: z.string(),
 	items: z.array(z.string())
@@ -96,7 +96,7 @@ export const metaSchema = z.object({
 })
 export type Meta = z.infer<typeof metaSchema>
 
-/** Profile content — rich MD body */
+/** Profile content (rich MD body) */
 export interface Profile {
 	body: string
 }
