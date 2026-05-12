@@ -26,7 +26,7 @@ export const meta: Meta = {
 		{
 			label: 'Workflow IA-first',
 			description:
-				"Orchestration d'agents Claude Code, plan mode + Opus, parallélisation, commandes, skills custom, CLAUDE.md comme référentiel architectural vivant"
+				"Orchestration d'agents Claude Code, mode plan, parallélisation, commandes, skills custom, CLAUDE.md comme référentiel architectural vivant"
 		},
 		{
 			label: 'Leadership technique',
@@ -64,9 +64,12 @@ export const meta: Meta = {
 		{
 			label: 'IA',
 			items: [
-				'Claude Code (Opus, plan mode, agents parallèles, commandes, skills custom)',
+				'Claude Code',
+				'mode plan',
+				'agents parallèles',
+				'commandes & skills custom',
 				'workflow spec-first',
-				'CLAUDE.md architecture'
+				'architecture via CLAUDE.md'
 			]
 		},
 		{
