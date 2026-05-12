@@ -124,10 +124,10 @@
 	<div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
 		<section class="print-avoid-break rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
 			<SectionTitle title="Langues" />
-			<ul class="space-y-2 text-sm text-slate-700">
+			<ul class="space-y-2.5 text-sm text-slate-700">
 				{#each data.meta.langues as l (l.label)}
-					<li>
-						<span class="font-semibold text-slate-900">{l.label}</span> :
+					<li class="flex gap-3">
+						<span class="w-14 shrink-0 font-semibold text-teal-dark">{l.label}</span>
 						<span class="text-slate-600">{l.level}</span>
 					</li>
 				{/each}
