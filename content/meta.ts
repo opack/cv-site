@@ -5,7 +5,7 @@ export const meta: Meta = {
 		firstName: 'Didier',
 		lastName: 'Demange',
 		title: 'Tech Lead / Senior Dev Fullstack',
-		tagline: 'workflow IA-first',
+		tagline: 'pragmatisme · transmission · IA',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
 		location: 'Basé en France · full remote privilégié · mobilité ponctuelle possible',
