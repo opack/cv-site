@@ -4,11 +4,11 @@ export const meta: Meta = {
 	identity: {
 		firstName: 'Didier',
 		lastName: 'Demange',
-		title: 'Tech Lead / Senior Dev Fullstack',
-		tagline: 'pragmatisme · transmission · IA',
+		title: 'Développeur Fullstack Senior',
+		tagline: 'polyvalence · pragmatisme · ownership',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
-		location: 'Basé en France · full remote privilégié · mobilité ponctuelle possible',
+		location: '',
 		links: [
 			{
 				label: 'LinkedIn',
