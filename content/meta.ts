@@ -5,7 +5,7 @@ export const meta: Meta = {
 		firstName: 'Didier',
 		lastName: 'Demange',
 		title: 'Développeur Fullstack Senior',
-		tagline: 'polyvalence · pragmatisme · ownership',
+		tagline: 'polyvalence · pragmatisme · workflow IA-first',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
 		location: '',
@@ -21,7 +21,7 @@ export const meta: Meta = {
 	competences: [
 		{
 			label: 'Développement front',
-			description: 'Vue/Quasar, Svelte/SvelteKit, React, TypeScript ; UX, architectures modulaires'
+			description: 'Vue/Quasar, Svelte/SvelteKit, React, TypeScript ; conception UX (personas, parcours utilisateurs), architectures modulaires'
 		},
 		{
 			label: 'Workflow IA-first',

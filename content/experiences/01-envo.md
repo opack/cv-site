@@ -11,14 +11,15 @@ links:
     url: https://play.google.com/store/apps/details?id=fr.valdera.envo
   - label: App Store
     url: https://apps.apple.com/fr/app/envo-budget-avec-enveloppes/id6760191494
-tags: [Vue.js, Quasar, Firebase, Claude Code, TypeScript]
+tags: [Vue.js, Quasar, Firebase, Claude Code, TypeScript, UI/UX]
 ---
 
 <script>
   import { Star } from 'lucide-svelte';
 </script>
 
-- Conception complète produit, UX et architecture (Quasar, Vue.js, Firebase)
+- Conception complète produit et architecture (Quasar, Vue.js, Firebase)
+- **Conception UI/UX** : design des parcours (onboarding, gestion par enveloppes...), maquettage et itérations d'ergonomie mobile guidées par les retours utilisateurs (notamment via Discord)
 - Livraison continue sur les deux stores : **1 700+ téléchargements cumulés, 4,6/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
 - **Workflow IA-first avec Claude Code depuis février 2026** : CLAUDE.md comme référentiel architectural et règles de codage vivant, mis à jour au fil des revues ; mode plan + Opus pour les décisions structurantes ; tâches découpées en specs, agents parallèles sur chantiers disjoints ; revue et correction à chaque étape.
 - **Skills Claude Code custom** créés pour standardiser et accélérer les tâches récurrentes
