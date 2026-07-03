@@ -154,6 +154,7 @@
 		{/if}
 	</div>
 
+	<!-- Mention print masquée temporairement (CV personnalisé pour une offre). Décommenter pour rétablir.
 	<p
 		class="print-only mt-6 flex items-center justify-center gap-1 text-[9pt] text-slate-500 italic"
 	>
@@ -168,6 +169,7 @@
 			<ExternalLink class="h-3 w-3" strokeWidth={2.5} aria-hidden="true" />
 		</a>
 	</p>
+	-->
 
 	<footer class="no-print mt-12 text-center text-xs text-slate-400">
 		<p>Site construit en SvelteKit 2 · Svelte 5 · Tailwind CSS 4</p>
