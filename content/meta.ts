@@ -4,8 +4,8 @@ export const meta: Meta = {
 	identity: {
 		firstName: 'Didier',
 		lastName: 'Demange',
-		title: 'Développeur Fullstack Senior',
-		tagline: 'polyvalence · pragmatisme · ownership',
+		title: 'Manager DevOps',
+		tagline: 'leadership humain · pragmatisme · IA appliquée',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
 		location: '',
@@ -20,21 +20,23 @@ export const meta: Meta = {
 	},
 	competences: [
 		{
-			label: 'Développement front',
-			description: 'Vue/Quasar, Svelte/SvelteKit, React, TypeScript ; UX, architectures modulaires'
+			label: 'Management d’équipe',
+			description:
+				'Communication et écoute, animation d’équipe, suivi individuel, entretiens annuels, accompagnement à la montée en compétence et à l’autonomisation, gestion de conflits'
 		},
 		{
-			label: 'Workflow IA-first',
+			label: 'Pilotage de projets',
 			description:
-				"Orchestration d'agents Claude Code, mode plan, parallélisation, commandes, skills custom, CLAUDE.md comme référentiel architectural vivant"
+				'Gestion budgétaire, méthodes agiles (dont Scrum, Kanban), interface comité de direction et autres départements'
+		},
+		{
+			label: 'IA appliquée',
+			description:
+				'Sensibilisation et déploiement de workflows IA-first (Claude Code) comme levier de productivité et de nouveaux services'
 		},
 		{
 			label: 'Leadership technique',
-			description: 'Choix de stack, qualité code, CI/CD, revue, veille, cadrage'
-		},
-		{
-			label: 'Formation & transmission',
-			description: 'Montée en compétence des devs, documentation, présentations'
+			description: 'Choix de stack, architecture, qualité code, CI/CD, revue, veille'
 		}
 	],
 	stack: [
