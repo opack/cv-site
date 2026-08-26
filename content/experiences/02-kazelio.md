@@ -1,5 +1,5 @@
 ---
-title: Co-fondateur & développeur
+title: Co-fondateur
 company: Kazelio
 dateStart: '2024-01'
 dateEnd: '2025-01'

@@ -1,19 +1,29 @@
 ---
-title: Technical Leader
+title: Technical Leader DevOps
 company: EasyVista
 dateStart: '2017-07'
 dateEnd: '2022-02'
-teamSize: Équipe de 22 personnes
-subtitle: Accompagnement technique pour maintenir et élever la qualité du code, mise en place d'outils et méthodes structurants.
-tags: [React, TypeScript, WordPress, Notion, Ranorex, Jenkins, SonarQube, Scrum]
+teamSize: Équipe de 22 personnes accompagnées
+subtitle: "Accompagnement d'une équipe de 22 développeurs pour maintenir et améliorer la qualité du code : outils, méthodes et rituels structurants installés dans la durée."
+tags: [React, TypeScript, WordPress, Notion, Ranorex, Jenkins, SonarQube, Azure DevOps, Scrum]
 ---
 
-Réalisations phares :
+**Mon rôle**
 
-- **La Forge** : Conception et développement (React, TypeScript) d'une application centralisant documentation, provisioning d'environnements, suivi du dépôt de sources et pipeline CI/CD
-- **DevDocs** : Création du site documentaire transverse sous WordPress, animé par et pour les devs
-- **Café Techs** : Rituel d'échange hebdomadaire sur la veille technologique
-- **Tests E2E Ranorex** : Choix de l'outil, cadrage commercial, intégration technique, formation et accompagnement des équipes
-- **Notion** : Déploiement transverse (commercial, formation, conventions, accompagnement)
+- Veille technologique et choix techniques structurants
+- Mise en œuvre d'outils et de méthodes
+- Revue de code, industrialisation des processus
+- Formation et transmission
 
-Au quotidien : veille, choix techniques structurants (ex. étude pour le choix d'un framework JS), formations Git, animation de présentations, évolution continue des conventions de code.
+**Réalisations**
+
+- Outillage qualité et automatisation : **Jenkins**, **SonarQube**, **Azure DevOps**, tests E2E Ranorex, site documentaire, Notion
+- Industrialisation des processus : génération de plateformes, pipelines CI/CD
+- Méthodes : adaptation de Scrum, process de revue et de validation de code, SDLC
+- Café Techs (rituel hebdomadaire de veille), formations Git et présentations techniques
+- Étude et sélection d'un framework JS (choix structurant pour les équipes)
+
+**Résultats**
+
+- Baisse observée du nombre de régressions après la mise en place des process de revue et de l'outillage qualité
+- Café Techs suivis par plus de la moitié de l'équipe de développement
