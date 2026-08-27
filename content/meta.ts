@@ -1,11 +1,13 @@
-import type { Meta } from '$lib/types'
+import type { BaseMeta } from '$lib/types'
 
-export const meta: Meta = {
+/**
+ * Everything that does not depend on the targeted role.
+ * Title, tagline and competences live in `content/variants.ts`.
+ */
+export const meta: BaseMeta = {
 	identity: {
 		firstName: 'Didier',
 		lastName: 'Demange',
-		title: 'Manager DevOps',
-		tagline: 'leadership humain · pragmatisme · IA appliquée',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
 		location: '',
@@ -18,40 +20,17 @@ export const meta: Meta = {
 			{ label: 'GitHub', url: 'https://github.com/opack', handle: 'opack' }
 		]
 	},
-	competences: [
-		{
-			label: 'Management d’équipe',
-			description:
-				'Communication et écoute, animation d’équipe, suivi individuel, entretiens annuels, accompagnement à la montée en compétence et à l’autonomisation, gestion de conflits'
-		},
-		{
-			label: 'Pilotage de projets',
-			description:
-				'Gestion budgétaire, méthodes agiles (dont Scrum, Kanban), interface comité de direction et autres départements'
-		},
-		{
-			label: 'IA appliquée',
-			description:
-				'Sensibilisation et déploiement de workflows IA-first (Claude Code) comme levier de productivité et de nouveaux services'
-		},
-		{
-			label: 'Leadership technique',
-			description: 'Choix de stack, architecture, qualité code, CI/CD, revue, veille'
-		}
-	],
 	stack: [
 		{
 			label: 'Front-end',
 			items: [
 				'JavaScript',
 				'TypeScript',
+				'React',
 				'Vue.js',
 				'Quasar',
 				'Svelte',
 				'SvelteKit',
-				'React',
-				'HTML5',
-				'CSS3',
 				'TailwindCSS'
 			]
 		},

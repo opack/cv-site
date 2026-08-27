@@ -1,10 +1,8 @@
-import { loadExperiences, loadProfile, loadMeta } from '$lib/content'
+import { loadCv } from '$lib/content'
+import { defaultVariant } from '../../content/variants'
 
 export const prerender = true
 
 export function load() {
-	const experiences = loadExperiences()
-	const profile = loadProfile()
-	const meta = loadMeta()
-	return { experiences, profile, meta }
+	return loadCv(defaultVariant)
 }
