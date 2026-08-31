@@ -3,6 +3,8 @@
 	import Header from '$lib/components/Header.svelte'
 	import SectionTitle from '$lib/components/SectionTitle.svelte'
 	import type { CvVariant, ExperienceFrontmatter, HobbyIcon, Meta } from '$lib/types'
+	import { browser } from '$app/environment'
+	import { page } from '$app/state'
 	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte'
 	import type { Component, ComponentType } from 'svelte'
 
@@ -17,6 +19,13 @@
 	let { data }: Props = $props()
 
 	const Profile = $derived(data.profile.component)
+
+	/**
+	 * Version détaillée, activée par `?details` : chaque point d'expérience
+	 * déploie les précisions rédigées sous lui dans le markdown. Le paramètre est
+	 * lu côté client uniquement — les pages sont prérendues sans query string.
+	 */
+	const showDetails = $derived(browser && page.url.searchParams.has('details'))
 
 	const hobbyIcons: Record<HobbyIcon, ComponentType> = {
 		boardgame: Dices,
@@ -41,8 +50,15 @@
 	{/if}
 </svelte:head>
 
-<main class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0">
+<main
+	class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0"
+	class:cv-details={showDetails}
+>
 	<Header identity={data.meta.identity} />
+
+	{#if showDetails}
+		<p class="mt-3 text-center text-xs tracking-wide text-slate-400 uppercase">Version détaillée</p>
+	{/if}
 
 	<section
 		class="print-avoid-break mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm md:p-7"

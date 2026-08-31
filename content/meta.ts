@@ -40,7 +40,7 @@ export const meta: BaseMeta = {
 		},
 		{
 			label: 'DevOps & outillage',
-			items: ['Git', 'Docker', 'Jenkins', 'SonarQube', 'Azure DevOps', 'AWS', 'CI/CD']
+			items: ['Git', 'Docker', 'Jenkins', 'SonarQube', 'Azure DevOps', 'AWS', 'CI/CD', 'Sentry']
 		},
 		{
 			label: 'IA',
