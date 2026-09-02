@@ -74,9 +74,13 @@
 			<SectionTitle title="Compétences clés" />
 			<ul class="space-y-3">
 				{#each data.meta.competences as comp (comp.label)}
-					<li class="text-sm text-slate-700">
-						<span class="block font-semibold text-slate-900">{comp.label}</span>
-						<span class="text-slate-600">{comp.description}</span>
+					<li>
+						<span class="block text-sm font-semibold text-slate-900">{comp.label}</span>
+						<div class="mt-1 flex flex-wrap gap-1.5">
+							{#each comp.items as item (item)}
+								<span class="rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-700">{item}</span>
+							{/each}
+						</div>
 					</li>
 				{/each}
 			</ul>

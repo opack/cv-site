@@ -40,7 +40,7 @@ export type SkillGroup = z.infer<typeof skillGroupSchema>
 
 export const competenceSchema = z.object({
 	label: z.string(),
-	description: z.string()
+	items: z.array(z.string().min(1)).min(1)
 })
 export type Competence = z.infer<typeof competenceSchema>
 

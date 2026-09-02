@@ -55,5 +55,5 @@ tags: [Vue.js, Quasar, TypeScript, Firebase, Capacitor, Pinia, Sentry, GitHub Ac
 #### Résultats
 
 - **Près de 2 500 comptes créés, 4,6/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
-- **61 versions livrées en 18 mois**, soit une tous les neuf jours en moyenne, sur trois plateformes maintenues seul
+- **59 versions livrées en onze mois**, soit une tous les six jours en moyenne, sur trois plateformes maintenues seul
 - Rythme de livraison comparable à celui d'une petite équipe
