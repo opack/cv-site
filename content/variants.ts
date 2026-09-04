@@ -61,10 +61,10 @@ export const variants = {
 		]
 	},
 	manager: {
-		title: 'Manager DevOps',
+		title: 'Engineering Manager',
 		tagline: 'leadership humain · pragmatisme · IA appliquée',
 		description:
-			"CV de Didier Demange - Manager DevOps. 18 ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, IA appliquée.",
+			"CV de Didier Demange - Engineering Manager. 18 ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, IA appliquée.",
 		ogDescription:
 			"18 ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, workflow IA-first avec Claude Code.",
 		url: 'https://demange.noatis.fr/manager',

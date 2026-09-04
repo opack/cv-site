@@ -2,4 +2,4 @@
 
 Sur [**Envo**](https://envo.valdera.fr), mon app mobile de gestion de budget (iOS & Android, près de 2 400 comptes, 4,6/5), je maintiens seul un rythme de livraison comparable à une petite équipe grâce à un **workflow IA-first (Claude Code)**, une pratique que je souhaite aujourd'hui déployer au niveau d'une équipe, comme levier de productivité et de nouveaux services.
 
-J'ai passé 15 ans à faire monter en compétence des devs juniors et confirmés. Je recherche un poste de **Manager DevOps** où piloter des projets techniques tout en développant l'autonomie et l'assurance d'une équipe.
+J'ai passé 15 ans à faire monter en compétence des devs juniors et confirmés. Je recherche un poste d'**Engineering Manager** où piloter des projets techniques tout en développant l'autonomie et l'assurance d'une équipe.
