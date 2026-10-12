@@ -32,8 +32,27 @@ revues et des décisions structurantes.
 - `content/experiences/*.md` — une expérience par fichier. Préfixe numérique
   indicatif, l'ordre réel est calculé par `compareByDate` dans `src/lib/content.ts`
   à partir des dates frontmatter (antichrono).
-- `content/profile.md` — paragraphe d'accroche, rich text.
-- `content/meta.ts` — identité, compétences, stack, formations, diplômes, langues.
+- `content/profile.<variante>.md` — paragraphe d'accroche, rich text, un fichier
+  par variante de CV.
+- `content/meta.ts` — le socle commun à toutes les variantes : identité, stack,
+  formations, diplômes, langues, hobbies.
+- `content/variants.ts` — la tranche du CV qui dépend du poste visé : titre,
+  tagline, métadonnées SEO, compétences clés.
+
+## Variantes de CV
+
+Le site sert plusieurs orientations du même CV. Les expériences, la stack et les
+formations sont partagées ; seuls l'accroche, le titre, les compétences clés et
+les métadonnées changent.
+
+- `dev` — variante par défaut, servie sur `/`, indexable.
+- `manager` — servie sur `/manager`, `noindex` et exclue de `robots.txt` pour
+  qu'elle ne concurrence pas la variante principale en recherche.
+
+Pour ajouter une variante : une entrée dans `content/variants.ts`, un fichier
+`content/profile.<slug>.md`, et une route `src/routes/<slug>/` de deux fichiers
+(`+page.ts` appelant `loadCv('<slug>')`, `+page.svelte` rendant `CvPage`). Le
+rendu vit dans `src/lib/components/CvPage.svelte`, jamais dupliqué par route.
 
 ## Print vs Web
 

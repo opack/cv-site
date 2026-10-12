@@ -1,8 +1,11 @@
 import type { Component } from 'svelte'
 import { meta as rawMeta } from '../../content/meta'
+import { variants, type VariantSlug } from '../../content/variants'
 import {
+	cvVariantSchema,
 	experienceFrontmatterSchema,
 	metaSchema,
+	type CvVariant,
 	type ExperienceFrontmatter,
 	type Meta
 } from './types'
@@ -40,15 +43,32 @@ export function loadExperiences(): {
 	return loaded.sort((a, b) => compareByDate(a.frontmatter, b.frontmatter))
 }
 
-export function loadProfile(): { component: Component } {
-	const modules = import.meta.glob<MdModule>('/content/profile.md', { eager: true })
-	const first = Object.values(modules)[0]
-	if (!first) throw new Error('Missing content/profile.md')
-	return { component: first.default }
+export function loadProfile(variant: VariantSlug): { component: Component } {
+	const modules = import.meta.glob<MdModule>('/content/profile.*.md', { eager: true })
+	const profile = modules[`/content/profile.${variant}.md`]
+	if (!profile) throw new Error(`Missing content/profile.${variant}.md`)
+	return { component: profile.default }
 }
 
-export function loadMeta(): Meta {
-	const parsed = metaSchema.safeParse(rawMeta)
+export function loadVariant(variant: VariantSlug): CvVariant {
+	const parsed = cvVariantSchema.safeParse(variants[variant])
+	if (!parsed.success) {
+		throw new Error(
+			`Invalid variant "${variant}" in variants.ts:\n${parsed.error.issues
+				.map((i) => ` - ${i.path.join('.')}: ${i.message}`)
+				.join('\n')}`
+		)
+	}
+	return parsed.data
+}
+
+/** Compose the shared base meta with the role-dependent slice of a variant. */
+export function loadMeta(variant: CvVariant): Meta {
+	const parsed = metaSchema.safeParse({
+		...rawMeta,
+		identity: { ...rawMeta.identity, title: variant.title, tagline: variant.tagline },
+		competences: variant.competences
+	})
 	if (!parsed.success) {
 		throw new Error(
 			`Invalid meta.ts:\n${parsed.error.issues
@@ -57,4 +77,15 @@ export function loadMeta(): Meta {
 		)
 	}
 	return parsed.data
+}
+
+/** Shared page `load` for every CV variant route. */
+export function loadCv(variant: VariantSlug) {
+	const cvVariant = loadVariant(variant)
+	return {
+		experiences: loadExperiences(),
+		profile: loadProfile(variant),
+		meta: loadMeta(cvVariant),
+		variant: cvVariant
+	}
 }

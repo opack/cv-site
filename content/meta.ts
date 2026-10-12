@@ -1,11 +1,13 @@
-import type { Meta } from '$lib/types'
+import type { BaseMeta } from '$lib/types'
 
-export const meta: Meta = {
+/**
+ * Everything that does not depend on the targeted role.
+ * Title, tagline and competences live in `content/variants.ts`.
+ */
+export const meta: BaseMeta = {
 	identity: {
 		firstName: 'Didier',
 		lastName: 'Demange',
-		title: 'Développeur Fullstack Senior',
-		tagline: 'polyvalence · pragmatisme · ownership',
 		email: 'didier.demange@gmail.com',
 		phone: '06 24 47 82 44',
 		location: '',
@@ -18,38 +20,17 @@ export const meta: Meta = {
 			{ label: 'GitHub', url: 'https://github.com/opack', handle: 'opack' }
 		]
 	},
-	competences: [
-		{
-			label: 'Développement front',
-			description: 'Vue/Quasar, Svelte/SvelteKit, React, TypeScript ; UX, architectures modulaires'
-		},
-		{
-			label: 'Workflow IA-first',
-			description:
-				"Orchestration d'agents Claude Code, mode plan, parallélisation, commandes, skills custom, CLAUDE.md comme référentiel architectural vivant"
-		},
-		{
-			label: 'Leadership technique',
-			description: 'Choix de stack, qualité code, CI/CD, revue, veille, cadrage'
-		},
-		{
-			label: 'Formation & transmission',
-			description: 'Montée en compétence des devs, documentation, présentations'
-		}
-	],
 	stack: [
 		{
 			label: 'Front-end',
 			items: [
 				'JavaScript',
 				'TypeScript',
+				'React',
 				'Vue.js',
 				'Quasar',
 				'Svelte',
 				'SvelteKit',
-				'React',
-				'HTML5',
-				'CSS3',
 				'TailwindCSS'
 			]
 		},
@@ -59,7 +40,7 @@ export const meta: Meta = {
 		},
 		{
 			label: 'DevOps & outillage',
-			items: ['Git', 'Docker', 'Jenkins', 'SonarQube', 'Azure DevOps', 'AWS', 'CI/CD']
+			items: ['Git', 'Docker', 'Jenkins', 'SonarQube', 'Azure DevOps', 'AWS', 'CI/CD', 'Sentry']
 		},
 		{
 			label: 'IA',

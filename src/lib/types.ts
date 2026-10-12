@@ -40,7 +40,7 @@ export type SkillGroup = z.infer<typeof skillGroupSchema>
 
 export const competenceSchema = z.object({
 	label: z.string(),
-	description: z.string()
+	items: z.array(z.string().min(1)).min(1)
 })
 export type Competence = z.infer<typeof competenceSchema>
 
@@ -75,24 +75,46 @@ export const hobbySchema = z.object({
 })
 export type Hobby = z.infer<typeof hobbySchema>
 
-/** Full meta.yaml shape */
-export const metaSchema = z.object({
-	identity: z.object({
-		firstName: z.string(),
-		lastName: z.string(),
-		title: z.string(),
-		tagline: z.string().optional(),
-		email: z.string().email(),
-		phone: z.string(),
-		location: z.string().optional(),
-		links: z.array(linkSchema)
-	}),
-	competences: z.array(competenceSchema),
+/** Identity fields shared by every CV variant */
+export const baseIdentitySchema = z.object({
+	firstName: z.string(),
+	lastName: z.string(),
+	email: z.string().email(),
+	phone: z.string(),
+	location: z.string().optional(),
+	links: z.array(linkSchema)
+})
+
+/** content/meta.ts — everything that does not depend on the targeted role */
+export const baseMetaSchema = z.object({
+	identity: baseIdentitySchema,
 	stack: z.array(skillGroupSchema),
 	formations: z.array(formationSchema),
 	diplomas: z.array(diplomaSchema),
 	langues: z.array(langueSchema),
 	hobbies: z.array(hobbySchema).optional()
+})
+export type BaseMeta = z.infer<typeof baseMetaSchema>
+
+/** content/variants.ts — the role-dependent slice of the CV */
+export const cvVariantSchema = z.object({
+	title: z.string().min(1),
+	tagline: z.string().optional(),
+	description: z.string().min(1),
+	ogDescription: z.string().min(1),
+	url: z.string().url(),
+	indexable: z.boolean(),
+	competences: z.array(competenceSchema)
+})
+export type CvVariant = z.infer<typeof cvVariantSchema>
+
+/** Base meta composed with a variant — what the page components consume */
+export const metaSchema = baseMetaSchema.extend({
+	identity: baseIdentitySchema.extend({
+		title: z.string(),
+		tagline: z.string().optional()
+	}),
+	competences: z.array(competenceSchema)
 })
 export type Meta = z.infer<typeof metaSchema>
 
