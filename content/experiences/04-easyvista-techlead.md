@@ -23,6 +23,7 @@ tags: [React, TypeScript, WordPress, Notion, Ranorex, Jenkins, SonarQube, Azure 
 - Migration des plateformes historiques vers AWS et automatisation de la génération d'une version
   - Le parc de plateformes de développement et de test était hébergé en interne. La migration vers AWS, menée sur plusieurs exercices, a permis de libérer la salle serveur, et l'automatisation de la génération d'une version a supprimé une opération manuelle jusque-là répétée à chaque livraison.
 - Industrialisation des processus : génération de plateformes, pipelines CI/CD
+- Mise en place d'un VPN pour le travail à distance des développeurs et de la MOA
 - Accompagnement de l'adoption de TypeScript par les équipes de développement
 - Méthodes : adaptation de Scrum, process de revue et de validation de code, SDLC
 - Café Techs (rituel hebdomadaire de veille), formations Git et présentations techniques
@@ -33,4 +34,5 @@ tags: [React, TypeScript, WordPress, Notion, Ranorex, Jenkins, SonarQube, Azure 
 
 - Baisse observée du nombre de régressions après la mise en place des process de revue et de l'outillage qualité
 - Salle serveur libérée à l'issue de la migration des plateformes historiques
+- Travail à distance débloqué pour les développeurs et la MOA
 - Café Techs suivis par plus de la moitié de l'équipe de développement

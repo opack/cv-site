@@ -76,7 +76,7 @@
 				{#each data.meta.competences as comp (comp.label)}
 					<li>
 						<span class="block text-sm font-semibold text-slate-900">{comp.label}</span>
-						<div class="mt-1 flex flex-wrap gap-1.5">
+						<div class="print-chips mt-1 flex flex-wrap gap-1.5">
 							{#each comp.items as item (item)}
 								<span class="rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-700">{item}</span>
 							{/each}
@@ -92,7 +92,7 @@
 				{#each data.meta.stack as group (group.label)}
 					<li>
 						<span class="block text-sm font-semibold text-slate-900">{group.label}</span>
-						<div class="mt-1 flex flex-wrap gap-1.5">
+						<div class="print-chips mt-1 flex flex-wrap gap-1.5">
 							{#each group.items as item (item)}
 								<span class="rounded bg-teal-soft px-2 py-0.5 text-xs text-teal-dark">{item}</span>
 							{/each}

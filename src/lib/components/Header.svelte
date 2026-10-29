@@ -1,4 +1,5 @@
 <script lang="ts">
+	import photo from '$lib/assets/photo.jpg'
 	import type { Meta } from '$lib/types'
 	import { Link as LinkIcon, Mail, Phone } from 'lucide-svelte'
 
@@ -30,21 +31,17 @@
 		class="relative flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-8 md:px-8 md:py-10"
 	>
 		<div
-			class="flex h-28 w-28 shrink-0 flex-col items-center justify-center rounded-full border-4 border-white/60 bg-white/10 text-center shadow-inner backdrop-blur-sm md:h-32 md:w-32"
+			class="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-white/60 bg-white/10 shadow-inner md:h-32 md:w-32"
 		>
-			<div class="text-xl leading-none font-semibold tracking-tight md:text-2xl">
-				{identity.firstName}
-			</div>
-			<div class="text-xl leading-none font-semibold tracking-tight md:text-2xl">
-				{identity.lastName}
-			</div>
+			<img src={photo} alt="Portrait de {fullName}" class="h-full w-full object-cover" />
 		</div>
 
 		<div class="min-w-0 flex-1">
 			<h1 class="text-2xl leading-tight font-semibold md:text-3xl">
-				{identity.title}
+				{fullName}
+				<span class="block text-lg font-normal text-white/90 md:text-xl">{identity.title}</span>
 				{#if identity.tagline}
-					<span class="block text-lg font-normal text-white/85 md:text-xl">{identity.tagline}</span>
+					<span class="block text-sm font-normal text-white/80 md:text-base">{identity.tagline}</span>
 				{/if}
 			</h1>
 
@@ -99,8 +96,6 @@
 			{/if}
 		</div>
 	</div>
-
-	<p class="sr-only">{fullName}</p>
 </header>
 
 <style>

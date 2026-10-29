@@ -48,6 +48,12 @@ les métadonnées changent.
 - `dev` — variante par défaut, servie sur `/`, indexable.
 - `manager` — servie sur `/manager`, `noindex` et exclue de `robots.txt` pour
   qu'elle ne concurrence pas la variante principale en recherche.
+- `devops` — servie sur `/devops`, même traitement que `manager`.
+
+Une expérience peut être surchargée pour une variante : `content/experiences/<slug>.<variante>.md`
+(ex. `01-envo.devops.md`). Son frontmatter est fusionné sur celui du fichier de base (dates et
+entreprise restent dans la base), son corps remplace celui de la base. Une surcharge sans fichier de
+base fait échouer le build. `stackOrder` dans `variants.ts` réordonne les groupes de la stack.
 
 Pour ajouter une variante : une entrée dans `content/variants.ts`, un fichier
 `content/profile.<slug>.md`, et une route `src/routes/<slug>/` de deux fichiers
@@ -95,6 +101,7 @@ Choose the most precise scope in the following tree:
     - "vscode"
     - "webstorm"
     - "claude"
+- "cv": CV content, variants and rendering
 
 If no scope apply, create a new one and add it to the list.
 

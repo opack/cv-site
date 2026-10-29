@@ -343,6 +343,17 @@
 		margin-top: 0.4mm !important;
 	}
 
+	/* Pastilles compétences/stack : plus compactes pour que les deux cartes
+	   tiennent sur la première page avec le profil. */
+	.print-chips {
+		gap: 0.9mm !important;
+	}
+	.print-chips > span {
+		font-size: 8pt !important;
+		line-height: 1.4 !important;
+		padding: 0 1.8mm !important;
+	}
+
 	.no-print {
 		display: none !important;
 	}

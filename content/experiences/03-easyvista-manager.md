@@ -25,7 +25,6 @@ closingNote: "Mon objectif constant : permettre à l'équipe de mettre en œuvre
 - La Forge : documentation, provisioning d'environnements dev/test et suivi du dépôt de sources, utilisée par les équipes dev, produit et test
   - Le provisioning à la carte visait à remplacer les environnements de développement existants et à servir tous les publics : démonstration, avant-vente, développement et recette. L'étape suivante portait sur l'outillage de gestion du parc lui-même (création et suppression, supervision, suivi des coûts) pour que la mise à disposition ne crée pas une dette d'exploitation.
 - Pipeline CI/CD (Jenkins) et infrastructure AWS câblés pour l'ensemble des équipes de développement
-- Mise en place d'un VPN pour le travail à distance des développeurs et de la MOA
 - Refonte de la gestion documentaire de l'entreprise autour de Notion
   - Le sujet dépassait la R&D pour concerner l'ensemble des départements : interlocuteur des équipes Notion pour organiser les formations et gérer le volet contractuel et la facturation, définition des process d'usage, migration de l'existant, puis accompagnement des utilisateurs. Déployer un outil transverse tient moins de la migration technique que de l'adoption : sans process ni accompagnement, chacun recrée ses anciennes habitudes dans le nouvel outil.
 - Contribution à un projet de refonte complète de l'applicatif principal, arrêté lors du rachat de l'entreprise
@@ -35,4 +34,3 @@ closingNote: "Mon objectif constant : permettre à l'équipe de mettre en œuvre
 
 - Provisioning d'environnement dev/test : d'une installation manuelle poste par poste à quelques minutes, en libre-service
 - La Forge adoptée transversalement : 3 applications principales, plusieurs projets internes et POC
-- Travail à distance débloqué pour les développeurs et la MOA

@@ -104,7 +104,9 @@ export const cvVariantSchema = z.object({
 	ogDescription: z.string().min(1),
 	url: z.string().url(),
 	indexable: z.boolean(),
-	competences: z.array(competenceSchema)
+	competences: z.array(competenceSchema),
+	/** Stack group labels to show first, in this order. Unlisted groups follow. */
+	stackOrder: z.array(z.string()).optional()
 })
 export type CvVariant = z.infer<typeof cvVariantSchema>
 

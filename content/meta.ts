@@ -40,7 +40,25 @@ export const meta: BaseMeta = {
 		},
 		{
 			label: 'DevOps & outillage',
-			items: ['Git', 'Docker', 'Jenkins', 'SonarQube', 'Azure DevOps', 'AWS', 'CI/CD', 'Sentry']
+			items: [
+				'Git',
+				'Docker',
+				'Docker Compose',
+				'Jenkins',
+				'GitHub Actions',
+				'Azure DevOps',
+				'Ansible',
+				'Vagrant',
+				'Bash',
+				'PowerShell',
+				'AWS (EC2, S3, IAM, Secrets Manager, ECR)',
+				'Artifactory / Nexus',
+				'ELK',
+				'SonarQube',
+				'Netlify',
+				'CI/CD',
+				'Sentry'
+			]
 		},
 		{
 			label: 'IA',

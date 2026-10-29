@@ -114,6 +114,59 @@ export const variants = {
 				items: ['choix de stack', 'architecture', 'qualité de code', 'CI/CD', 'revue', 'veille']
 			}
 		]
+	},
+	devops: {
+		title: 'Ingénieur DevOps',
+		tagline: 'automatisation · pragmatisme · ownership',
+		description:
+			"CV de Didier Demange - Ingénieur DevOps. 18 ans d'expérience dont 6 ans en rôle DevOps : pipelines Jenkins, Docker, Ansible, infrastructure AWS, migration depuis l'on-premise, environnements jetables en libre-service, logs ELK, outillage qualité.",
+		ogDescription:
+			"6 ans en rôle DevOps chez EasyVista : Jenkins, Docker, Ansible, AWS, environnements jetables en libre-service, outillage qualité. Pipeline de déploiement GitHub Actions multi-environnements en solo sur Envo.",
+		url: 'https://demange.noatis.fr/devops',
+		indexable: false,
+		stackOrder: ['DevOps & outillage', 'Back-end & data', 'Front-end', 'Méthodes', 'IA'],
+		competences: [
+			{
+				label: 'CI/CD & automatisation',
+				items: [
+					'pipelines Jenkins',
+					'GitHub Actions',
+					'génération de version',
+					'Bash / PowerShell',
+					'AWS CLI'
+				]
+			},
+			{
+				label: 'Cloud & infrastructure',
+				items: [
+					'AWS (EC2, S3, IAM)',
+					'Docker multi-stage',
+					'Ansible, Vagrant',
+					'environnements jetables',
+					'migration VMware vers AWS',
+					'serverless (Cloud Functions)',
+					'stockage (S3, Firebase Storage)',
+					'VPN'
+				]
+			},
+			{
+				label: 'Qualité & sécurité',
+				items: ['SonarQube', 'tests E2E', 'tests des règles de sécurité', 'revue de code']
+			},
+			{
+				label: 'Exploitation & fiabilité',
+				items: [
+					'Sentry',
+					'logs centralisés (ELK)',
+					'process de mise en production',
+					'migrations sans interruption'
+				]
+			},
+			{
+				label: 'Plateforme interne & adoption',
+				items: ['La Forge', 'accompagnement de 22 développeurs', 'documentation']
+			}
+		]
 	}
 } satisfies Record<string, CvVariant>
 
