@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte'
 	import Header from '$lib/components/Header.svelte'
+	import PrintButton from '$lib/components/PrintButton.svelte'
 	import SectionTitle from '$lib/components/SectionTitle.svelte'
 	import VariantSwitcher from '$lib/components/VariantSwitcher.svelte'
 	import type { CvVariant, ExperienceFrontmatter, HobbyIcon, Meta } from '$lib/types'
@@ -65,14 +66,19 @@
 	{/if}
 </svelte:head>
 
-{#if fromHome}
-	<VariantSwitcher current={data.slug} entries={data.switchEntries} />
-{/if}
+<PrintButton />
 
 <main
-	class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0"
+	class={[
+		'mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0',
+		fromHome && 'pt-3 md:pt-3 print:pt-0'
+	]}
 	class:cv-details={showDetails}
 >
+	{#if fromHome}
+		<VariantSwitcher current={data.slug} entries={data.switchEntries} />
+	{/if}
+
 	<Header identity={data.meta.identity} />
 
 	{#if showDetails}

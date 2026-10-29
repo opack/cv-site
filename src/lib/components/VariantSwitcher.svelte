@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowLeft, Printer } from 'lucide-svelte'
+	import { ArrowLeft } from 'lucide-svelte'
 
 	type Props = {
 		current: string
@@ -10,7 +10,7 @@
 
 <nav
 	aria-label="Changer d’angle"
-	class="no-print mx-auto flex max-w-215 flex-wrap items-center gap-x-3 gap-y-2 px-4 pt-6 text-sm md:px-6"
+	class="no-print mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm"
 >
 	<a
 		href="/"
@@ -20,7 +20,7 @@
 		Accueil
 	</a>
 	<span class="text-slate-300" aria-hidden="true">|</span>
-	<span class="text-slate-500">Ce parcours, côté</span>
+	<span class="text-slate-500">Mon parcours, côté</span>
 	<ul class="flex flex-wrap gap-1.5">
 		{#each entries as entry (entry.slug)}
 			<li>
@@ -37,12 +37,4 @@
 			</li>
 		{/each}
 	</ul>
-	<button
-		type="button"
-		onclick={() => window.print()}
-		class="ml-auto inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700 transition-colors hover:border-teal-primary hover:text-teal-dark"
-	>
-		<Printer class="h-4 w-4" aria-hidden="true" />
-		Imprimer en PDF
-	</button>
 </nav>
