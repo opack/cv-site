@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowLeft } from 'lucide-svelte'
+	import { ArrowLeft, Printer } from 'lucide-svelte'
 
 	type Props = {
 		current: string
@@ -37,4 +37,12 @@
 			</li>
 		{/each}
 	</ul>
+	<button
+		type="button"
+		onclick={() => window.print()}
+		class="ml-auto inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700 transition-colors hover:border-teal-primary hover:text-teal-dark"
+	>
+		<Printer class="h-4 w-4" aria-hidden="true" />
+		Imprimer en PDF
+	</button>
 </nav>
