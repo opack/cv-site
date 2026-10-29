@@ -120,6 +120,41 @@ export const metaSchema = baseMetaSchema.extend({
 })
 export type Meta = z.infer<typeof metaSchema>
 
+const yearMonthSchema = z.string().regex(/^\d{4}-\d{2}$/, 'YYYY-MM expected')
+
+/** One stretch of the career timeline shown on the landing page */
+export const homePhaseSchema = z.object({
+	start: yearMonthSchema,
+	end: z.union([yearMonthSchema, z.literal('present')]),
+	label: z.string().min(1),
+	detail: z.string().min(1)
+})
+
+/** One way into the CV: a card on the landing page and a button in the switcher */
+export const homeEntrySchema = z.object({
+	/** Key of `content/variants.ts` */
+	slug: z.string().min(1),
+	/** Short name, used on buttons */
+	label: z.string().min(1),
+	pitch: z.string().min(1),
+	proofs: z.array(z.string().min(1)).min(1)
+})
+export type HomeEntry = z.infer<typeof homeEntrySchema>
+
+/** content/home.ts — landing page: framing, career timeline and entry points */
+export const homeSchema = z.object({
+	title: z.string().min(1),
+	tagline: z.string().optional(),
+	description: z.string().min(1),
+	ogDescription: z.string().min(1),
+	url: z.string().url(),
+	/** Framing paragraphs: the thread running through the whole career */
+	thread: z.array(z.string().min(1)).min(1),
+	phases: z.array(homePhaseSchema).min(1),
+	entries: z.array(homeEntrySchema).min(1)
+})
+export type Home = z.infer<typeof homeSchema>
+
 /** Profile content (rich MD body) */
 export interface Profile {
 	body: string

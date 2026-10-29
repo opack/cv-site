@@ -45,17 +45,25 @@ Le site sert plusieurs orientations du même CV. Les expériences, la stack et l
 formations sont partagées ; seuls l'accroche, le titre, les compétences clés et
 les métadonnées changent.
 
-- `dev` — variante par défaut, servie sur `/`, indexable.
-- `manager` — servie sur `/manager`, `noindex` et exclue de `robots.txt` pour
-  qu'elle ne concurrence pas la variante principale en recherche.
-- `devops` — servie sur `/devops`, même traitement que `manager`.
+`/` est une page d'accueil (`content/home.ts`, rendue par `HomePage.svelte`) : fil
+conducteur du parcours, frise, et une carte par variante. Elle seule est indexable.
+
+- `dev` — servie sur `/dev`.
+- `manager` — servie sur `/manager`.
+- `devops` — servie sur `/devops`.
+
+Les variantes sont `noindex` et exclues de `robots.txt`, pour qu'elles ne concurrencent
+pas l'accueil en recherche. Un visiteur qui arrive directement sur une variante n'y voit
+pas les autres : le sélecteur d'angle (`VariantSwitcher`) n'apparaît que si l'URL porte
+`?from=home`, posé par les liens de l'accueil. Pas de stockage navigateur.
 
 Une expérience peut être surchargée pour une variante : `content/experiences/<slug>.<variante>.md`
 (ex. `01-envo.devops.md`). Son frontmatter est fusionné sur celui du fichier de base (dates et
 entreprise restent dans la base), son corps remplace celui de la base. Une surcharge sans fichier de
 base fait échouer le build. `stackOrder` dans `variants.ts` réordonne les groupes de la stack.
 
-Pour ajouter une variante : une entrée dans `content/variants.ts`, un fichier
+Pour ajouter une variante : une entrée dans `content/variants.ts`, une entrée dans
+`content/home.ts` (carte d'accueil et bouton du sélecteur), un fichier
 `content/profile.<slug>.md`, et une route `src/routes/<slug>/` de deux fichiers
 (`+page.ts` appelant `loadCv('<slug>')`, `+page.svelte` rendant `CvPage`). Le
 rendu vit dans `src/lib/components/CvPage.svelte`, jamais dupliqué par route.

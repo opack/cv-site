@@ -2,11 +2,12 @@
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte'
 	import Header from '$lib/components/Header.svelte'
 	import SectionTitle from '$lib/components/SectionTitle.svelte'
+	import VariantSwitcher from '$lib/components/VariantSwitcher.svelte'
 	import type { CvVariant, ExperienceFrontmatter, HobbyIcon, Meta } from '$lib/types'
 	import { browser } from '$app/environment'
 	import { page } from '$app/state'
 	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte'
-	import type { Component, ComponentType } from 'svelte'
+	import { onMount, type Component, type ComponentType } from 'svelte'
 
 	type Props = {
 		data: {
@@ -14,11 +15,25 @@
 			profile: { component: Component }
 			meta: Meta
 			variant: CvVariant
+			slug: string
+			switchEntries: { slug: string; label: string }[]
 		}
 	}
 	let { data }: Props = $props()
 
 	const Profile = $derived(data.profile.component)
+
+	/**
+	 * Le sélecteur d'angle n'apparaît que si l'on arrive depuis l'accueil
+	 * (`?from=home`) : un visiteur tombé directement sur une variante ne doit pas
+	 * y voir les autres. Lu après le montage, car les pages sont prérendues sans
+	 * query string.
+	 */
+	let mounted = $state(false)
+	onMount(() => {
+		mounted = true
+	})
+	const fromHome = $derived(mounted && page.url.searchParams.get('from') === 'home')
 
 	/**
 	 * Version détaillée, activée par `?details` : chaque point d'expérience
@@ -49,6 +64,10 @@
 		<meta name="robots" content="noindex, nofollow" />
 	{/if}
 </svelte:head>
+
+{#if fromHome}
+	<VariantSwitcher current={data.slug} entries={data.switchEntries} />
+{/if}
 
 <main
 	class="mx-auto max-w-215 px-4 py-8 md:px-6 md:py-10 print:px-0 print:py-0"

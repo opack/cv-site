@@ -1,9 +1,11 @@
 import type { Component } from 'svelte'
+import { home as rawHome } from '../../content/home'
 import { meta as rawMeta } from '../../content/meta'
 import { variants, type VariantSlug } from '../../content/variants'
 import {
 	cvVariantSchema,
 	experienceFrontmatterSchema,
+	homeSchema,
 	metaSchema,
 	type CvVariant,
 	type ExperienceFrontmatter,
@@ -102,6 +104,41 @@ export function loadMeta(variant: CvVariant): Meta {
 	return parsed.data
 }
 
+const monthIndex = (yearMonth: string) => {
+	const [year, month] = yearMonth.split('-').map(Number)
+	return year * 12 + month
+}
+
+/** Landing page: validated content, identity for the header, timeline with durations. */
+export function loadHome() {
+	const parsed = homeSchema.safeParse(rawHome)
+	if (!parsed.success) {
+		throw new Error(
+			`Invalid home.ts:\n${parsed.error.issues
+				.map((i) => ` - ${i.path.join('.')}: ${i.message}`)
+				.join('\n')}`
+		)
+	}
+	const home = parsed.data
+	const unknown = home.entries.filter((e) => !(e.slug in variants))
+	if (unknown.length > 0) {
+		throw new Error(`Unknown variant in home.ts: ${unknown.map((e) => e.slug).join(', ')}`)
+	}
+
+	const now = new Date()
+	const nowIndex = now.getFullYear() * 12 + now.getMonth() + 1
+	const phases = home.phases.map((phase) => ({
+		...phase,
+		months: (phase.end === 'present' ? nowIndex : monthIndex(phase.end)) - monthIndex(phase.start),
+		period: `${phase.start.slice(0, 4)} – ${phase.end === 'present' ? 'aujourd’hui' : phase.end.slice(0, 4)}`
+	}))
+
+	return {
+		home: { ...home, phases },
+		identity: { ...rawMeta.identity, title: home.title, tagline: home.tagline }
+	}
+}
+
 /** Shared page `load` for every CV variant route. */
 export function loadCv(variant: VariantSlug) {
 	const cvVariant = loadVariant(variant)
@@ -109,6 +146,8 @@ export function loadCv(variant: VariantSlug) {
 		experiences: loadExperiences(variant),
 		profile: loadProfile(variant),
 		meta: loadMeta(cvVariant),
-		variant: cvVariant
+		variant: cvVariant,
+		slug: variant,
+		switchEntries: loadHome().home.entries.map(({ slug, label }) => ({ slug, label }))
 	}
 }

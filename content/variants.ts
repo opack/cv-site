@@ -5,8 +5,9 @@ import type { CvVariant } from '$lib/types'
  * Everything else (experiences, stack, formations, diplomas, …) is shared and
  * lives in `content/meta.ts` and `content/experiences/`.
  *
- * `dev` is the default variant, served at `/`. Add a new entry here plus a
- * `content/profile.<slug>.md` file and a `src/routes/<slug>/` page to create
+ * Each variant is served at `/<slug>`; `/` is the landing page described in
+ * `content/home.ts`. Add a new entry here plus a `content/profile.<slug>.md`
+ * file, a `src/routes/<slug>/` page and an entry in `content/home.ts` to create
  * another variant.
  */
 export const variants = {
@@ -17,8 +18,8 @@ export const variants = {
 			"CV de Didier Demange - Développeur fullstack senior. 18 ans d'expérience, TypeScript, Vue.js et Svelte, architecture applicative, apps mobiles et web livrées de bout en bout, workflow IA-first avec Claude Code.",
 		ogDescription:
 			"18 ans d'expérience en développement. TypeScript, Vue.js, Svelte, Firebase, Supabase. Apps mobiles et web conçues, développées et livrées de bout en bout.",
-		url: 'https://demange.noatis.fr',
-		indexable: true,
+		url: 'https://demange.noatis.fr/dev',
+		indexable: false,
 		competences: [
 			{
 				label: 'Développement & architecture',
@@ -171,4 +172,3 @@ export const variants = {
 } satisfies Record<string, CvVariant>
 
 export type VariantSlug = keyof typeof variants
-export const defaultVariant: VariantSlug = 'dev'

@@ -1,4 +1,5 @@
-# allow crawling everything by default
+# allow crawling the landing page only: CV variants are reached from it
 User-agent: *
-Disallow: /manager
+Disallow: /dev
 Disallow: /devops
+Disallow: /manager
