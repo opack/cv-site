@@ -26,11 +26,12 @@ export const meta: BaseMeta = {
 			items: [
 				'JavaScript',
 				'TypeScript',
-				'React',
 				'Vue.js',
 				'Quasar',
+				'Pinia',
 				'Svelte',
 				'SvelteKit',
+				'React',
 				'TailwindCSS'
 			]
 		},

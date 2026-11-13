@@ -48,7 +48,7 @@ export const home: Home = {
 			pitch: 'Vous cherchez quelqu’un qui livre un produit de bout en bout.',
 			proofs: [
 				'Envo : 59 versions livrées en onze mois, seul, sur trois plateformes',
-				'TypeScript, Vue.js, Svelte, Firebase, Supabase'
+				'Vue 3, Quasar, TypeScript, Firebase, Supabase'
 			]
 		},
 		{

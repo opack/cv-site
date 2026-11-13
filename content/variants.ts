@@ -12,15 +12,30 @@ import type { CvVariant } from '$lib/types'
  */
 export const variants = {
 	dev: {
-		title: 'Développeur fullstack senior',
-		tagline: 'adaptabilité · pragmatisme · ownership',
+		title: 'Développeur Vue.js / TypeScript senior',
+		tagline: 'Vue 3 · pragmatisme · ownership',
 		description:
-			"CV de Didier Demange - Développeur fullstack senior. 18 ans d'expérience, TypeScript, Vue.js et Svelte, architecture applicative, apps mobiles et web livrées de bout en bout, workflow IA-first avec Claude Code.",
+			"CV de Didier Demange - Développeur Vue.js / TypeScript senior. 18 ans d'expérience. Vue 3, Quasar, Pinia, TypeScript : app web, Android et iOS livrée seul depuis une seule codebase (59 versions en onze mois). Workflow IA-first avec Claude Code.",
 		ogDescription:
-			"18 ans d'expérience en développement. TypeScript, Vue.js, Svelte, Firebase, Supabase. Apps mobiles et web conçues, développées et livrées de bout en bout.",
+			"18 ans d'expérience en développement. Vue 3, Quasar, Pinia, TypeScript, Firebase. Une app web, Android et iOS conçue, développée et livrée de bout en bout depuis une seule codebase.",
 		url: 'https://demange.noatis.fr/dev',
 		indexable: false,
+		stackOrder: ['Front-end', 'Back-end & data', 'IA', 'Méthodes', 'DevOps & outillage'],
 		competences: [
+			{
+				label: 'Front-end Vue',
+				items: [
+					'Vue 3 (Composition API)',
+					'Quasar 2',
+					'Pinia',
+					'Vue Router',
+					'vue-i18n',
+					'composables',
+					'Vite',
+					'TypeScript',
+					'Capacitor (web, Android, iOS)'
+				]
+			},
 			{
 				label: 'Développement & architecture',
 				items: [
