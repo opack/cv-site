@@ -7,11 +7,11 @@ composants Svelte dans `src/lib/components/`.
 ## Démarrage
 
 ```bash
-npm install
-npm run dev          # http://localhost:5173
-npm run build        # génère build/ (pur statique)
-npm run preview      # prévisualise le build
-npm run check        # svelte-check + tsc
+pnpm install
+pnpm dev              # http://localhost:5173
+pnpm build            # génère build/ (pur statique)
+pnpm preview          # prévisualise le build
+pnpm check            # svelte-check + tsc
 ```
 
 ## Structure
@@ -42,7 +42,7 @@ static/
 ## Modifier le contenu
 
 - **Ajouter une expérience** : créer `content/experiences/XX-slug.md` avec le frontmatter attendu (voir `src/lib/types.ts` → `experienceFrontmatterSchema`). L'ordre d'affichage est calculé à partir de `dateEnd` / `dateStart` (antichrono).
-- **Modifier l'identité, la stack, les formations, les diplômes** : éditer `content/meta.ts`. Les schémas Zod valident au build — si un champ est oublié, `npm run build` échoue avec un message clair.
+- **Modifier l'identité, la stack, les formations, les diplômes** : éditer `content/meta.ts`. Les schémas Zod valident au build — si un champ est oublié, `pnpm build` échoue avec un message clair.
 - **Modifier le profil** : éditer `content/profile.md`.
 
 ## Export PDF
@@ -58,15 +58,15 @@ liens, masquage du footer, etc.).
 
 1. Push le repo sur GitHub.
 2. Sur Netlify : "Add new site" → "Import from Git" → choisir le repo.
-3. Les paramètres sont pré-remplis par `netlify.toml` (commande `npm run build`, dossier `build`).
+3. Les paramètres sont pré-remplis par `netlify.toml` (commande `pnpm build`, dossier `build`).
 
 ### Cloudflare Pages
 
-Framework preset : SvelteKit. Build command : `npm run build`. Output directory : `build`.
+Framework preset : SvelteKit. Build command : `pnpm build`. Output directory : `build`.
 
 ### Tout autre hébergeur statique
 
-Lancer `npm run build` et uploader le contenu du dossier `build/`.
+Lancer `pnpm build` et uploader le contenu du dossier `build/`.
 
 ## Stack & workflow
 
