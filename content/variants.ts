@@ -13,7 +13,7 @@ import type { CvVariant } from '$lib/types'
 export const variants = {
 	dev: {
 		title: 'Développeur Vue.js / TypeScript senior',
-		tagline: 'Vue 3 · pragmatisme · ownership',
+		tagline: 'adaptabilité · pragmatisme · ownership',
 		description:
 			"CV de Didier Demange - Développeur Vue.js / TypeScript senior. 18 ans d'expérience. Vue 3, Quasar, Pinia, TypeScript : app web, Android et iOS livrée seul depuis une seule codebase (59 versions en onze mois). Workflow IA-first avec Claude Code.",
 		ogDescription:
