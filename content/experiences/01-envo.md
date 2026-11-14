@@ -15,7 +15,7 @@ tags: [Vue.js, Quasar, TypeScript, Firebase, Capacitor, Pinia, Sentry, GitHub Ac
 ---
 
 <script>
-  import { Star } from 'lucide-svelte';
+  import { Star } from '@lucide/svelte';
 </script>
 
 #### Produit

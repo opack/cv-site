@@ -2,7 +2,7 @@
 	import Header from '$lib/components/Header.svelte'
 	import SectionTitle from '$lib/components/SectionTitle.svelte'
 	import type { Home, Meta } from '$lib/types'
-	import { ArrowRight } from 'lucide-svelte'
+	import { ArrowRight } from '@lucide/svelte'
 
 	type Props = {
 		data: {

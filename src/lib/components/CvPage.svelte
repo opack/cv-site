@@ -7,8 +7,8 @@
 	import type { CvVariant, ExperienceFrontmatter, HobbyIcon, Meta } from '$lib/types'
 	import { browser } from '$app/environment'
 	import { page } from '$app/state'
-	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from 'lucide-svelte'
-	import { onMount, type Component, type ComponentType } from 'svelte'
+	import { Dices, ExternalLink, Gamepad2, Guitar, Lightbulb, Piano } from '@lucide/svelte'
+	import { onMount, type Component } from 'svelte'
 
 	type Props = {
 		data: {
@@ -43,7 +43,7 @@
 	 */
 	const showDetails = $derived(browser && page.url.searchParams.has('details'))
 
-	const hobbyIcons: Record<HobbyIcon, ComponentType> = {
+	const hobbyIcons: Record<HobbyIcon, Component> = {
 		boardgame: Dices,
 		videogame: Gamepad2,
 		piano: Piano,

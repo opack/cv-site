@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Printer } from 'lucide-svelte'
+	import { Printer } from '@lucide/svelte'
 </script>
 
 <button
