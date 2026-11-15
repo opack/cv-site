@@ -21,13 +21,13 @@ export const home: Home = {
 	phases: [
 		{
 			start: '2007-10',
-			end: '2017-07',
+			end: '2017-06',
 			label: 'Développement & architecture',
 			detail:
 				'Sopra, Solutec, CNAF, Société Générale. Java/J2EE puis Spring Boot et AngularJS : référent technique, lead developer, architecte applicatif.'
 		},
 		{
-			start: '2017-07',
+			start: '2017-06',
 			end: '2023-10',
 			label: 'DevOps & leadership technique',
 			detail:

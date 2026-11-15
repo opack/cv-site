@@ -1,7 +1,7 @@
 ---
 title: Technical Leader DevOps
 company: EasyVista
-dateStart: '2017-07'
+dateStart: '2017-06'
 dateEnd: '2022-02'
 teamSize: Équipe de 22 personnes accompagnées
 subtitle: "Accompagnement d'une équipe de 22 développeurs pour maintenir et améliorer la qualité du code : outils, méthodes et rituels structurants installés dans la durée."
