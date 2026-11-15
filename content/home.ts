@@ -1,4 +1,5 @@
 import type { Home } from '$lib/types'
+import { figures } from './figures'
 
 /**
  * Landing page served at `/`: the thread running through the career, a
@@ -9,18 +10,18 @@ export const home: Home = {
 	title: 'Ingénieur logiciel',
 	tagline: 'rendre les développements plus efficaces',
 	description:
-		"Didier Demange - Ingénieur logiciel. 18 ans d'expérience : développement et architecture, DevOps, produits en solo. Un même parcours, à lire côté développeur, DevOps ou manager.",
+		`Didier Demange - Ingénieur logiciel. ${figures.experienceYears} ans d'expérience : développement et architecture, DevOps, produits en solo. Un même parcours, à lire côté développeur, DevOps ou manager.`,
 	ogDescription:
-		"18 ans à rendre les développements plus efficaces : développement et architecture, DevOps, produits en solo. Choisissez l'angle qui vous intéresse.",
+		`${figures.experienceYears} ans à rendre les développements plus efficaces : développement et architecture, DevOps, produits en solo. Choisissez l'angle qui vous intéresse.`,
 	url: 'https://demange.noatis.fr',
 	thread: [
-		"Depuis 18 ans, je rends des développements plus efficaces, par trois leviers : le code, la chaîne de livraison et l'équipe.",
-		'Dix ans à concevoir et construire des applications, six ans à industrialiser leur livraison, puis plus de deux ans à tout porter seul sur mes propres produits. Chaque étape a servi la suivante.',
+		`Depuis ${figures.experienceYears} ans, je rends des développements plus efficaces, par trois leviers : le code, la chaîne de livraison et l'équipe.`,
+		`Dix ans à concevoir et construire des applications, six ans à industrialiser leur livraison, puis plus de ${figures.soloYears} ans à tout porter seul sur mes propres produits. Chaque étape a servi la suivante.`,
 		"C'est un seul parcours : choisissez l'angle qui vous intéresse !"
 	],
 	phases: [
 		{
-			start: '2007-10',
+			start: figures.careerStart,
 			end: '2017-07',
 			label: 'Développement & architecture',
 			detail:
@@ -47,7 +48,7 @@ export const home: Home = {
 			label: 'Développeur',
 			pitch: 'Vous cherchez quelqu’un qui livre un produit de bout en bout.',
 			proofs: [
-				'Envo : 59 versions livrées en onze mois, seul, sur trois plateformes',
+				`Envo : ${figures.envoReleases} versions livrées en ${figures.envoReleasePeriod}, seul, sur trois plateformes`,
 				'TypeScript, Vue.js, Svelte, Firebase, Supabase'
 			]
 		},

@@ -1,4 +1,5 @@
 import type { CvVariant } from '$lib/types'
+import { figures } from './figures'
 
 /**
  * The role-dependent slice of the CV: headline, SEO metadata and key skills.
@@ -15,9 +16,9 @@ export const variants = {
 		title: 'Développeur fullstack senior',
 		tagline: 'adaptabilité · pragmatisme · ownership',
 		description:
-			"CV de Didier Demange - Développeur fullstack senior. 18 ans d'expérience, TypeScript, Vue.js et Svelte, architecture applicative, apps mobiles et web livrées de bout en bout, workflow IA-first avec Claude Code.",
+			`CV de Didier Demange - Développeur fullstack senior. ${figures.experienceYears} ans d'expérience, TypeScript, Vue.js et Svelte, architecture applicative, apps mobiles et web livrées de bout en bout, workflow IA-first avec Claude Code.`,
 		ogDescription:
-			"18 ans d'expérience en développement. TypeScript, Vue.js, Svelte, Firebase, Supabase. Apps mobiles et web conçues, développées et livrées de bout en bout.",
+			`${figures.experienceYears} ans d'expérience en développement. TypeScript, Vue.js, Svelte, Firebase, Supabase. Apps mobiles et web conçues, développées et livrées de bout en bout.`,
 		url: 'https://demange.noatis.fr/dev',
 		indexable: false,
 		competences: [
@@ -65,9 +66,9 @@ export const variants = {
 		title: 'Engineering Manager',
 		tagline: 'leadership humain · pragmatisme · IA appliquée',
 		description:
-			"CV de Didier Demange - Engineering Manager. 18 ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, IA appliquée.",
+			`CV de Didier Demange - Engineering Manager. ${figures.experienceYears} ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, IA appliquée.`,
 		ogDescription:
-			"18 ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, workflow IA-first avec Claude Code.",
+			`${figures.experienceYears} ans d'expérience en développement et management d'équipes techniques. Leadership humain, pilotage de projets, workflow IA-first avec Claude Code.`,
 		url: 'https://demange.noatis.fr/manager',
 		indexable: false,
 		competences: [
@@ -120,7 +121,7 @@ export const variants = {
 		title: 'Ingénieur DevOps',
 		tagline: 'automatisation · pragmatisme · ownership',
 		description:
-			"CV de Didier Demange - Ingénieur DevOps. 18 ans d'expérience dont 6 ans en rôle DevOps : pipelines Jenkins, Docker, Ansible, infrastructure AWS, migration depuis l'on-premise, environnements jetables en libre-service, logs ELK, outillage qualité.",
+			`CV de Didier Demange - Ingénieur DevOps. ${figures.experienceYears} ans d'expérience dont 6 ans en rôle DevOps : pipelines Jenkins, Docker, Ansible, infrastructure AWS, migration depuis l'on-premise, environnements jetables en libre-service, logs ELK, outillage qualité.`,
 		ogDescription:
 			"6 ans en rôle DevOps chez EasyVista : Jenkins, Docker, Ansible, AWS, environnements jetables en libre-service, outillage qualité. Pipeline de déploiement GitHub Actions multi-environnements en solo sur Envo.",
 		url: 'https://demange.noatis.fr/devops',

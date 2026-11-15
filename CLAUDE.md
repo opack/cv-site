@@ -38,6 +38,10 @@ revues et des décisions structurantes.
   formations, diplômes, langues, hobbies.
 - `content/variants.ts` — la tranche du CV qui dépend du poste visé : titre,
   tagline, métadonnées SEO, compétences clés.
+- `content/figures.ts` — les chiffres qui évoluent (comptes, note, versions,
+  années d'expérience…) et sont cités à plusieurs endroits. Jamais en dur
+  ailleurs : interpolés dans les `.ts`, importés dans un `<script>` puis rendus
+  `{figures.xxx}` dans les `.md`.
 
 ## Variantes de CV
 

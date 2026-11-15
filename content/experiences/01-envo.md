@@ -16,6 +16,7 @@ tags: [Vue.js, Quasar, TypeScript, Firebase, Capacitor, Pinia, Sentry, GitHub Ac
 
 <script>
   import { Star } from '@lucide/svelte';
+  import { figures } from '../figures';
 </script>
 
 #### Produit
@@ -54,6 +55,6 @@ tags: [Vue.js, Quasar, TypeScript, Firebase, Capacitor, Pinia, Sentry, GitHub Ac
 
 #### Résultats
 
-- **Près de 2 500 comptes créés, 4,6/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
-- **59 versions livrées en onze mois**, soit une tous les six jours en moyenne, sur trois plateformes maintenues seul
+- **Plus de {figures.envoAccounts} comptes créés, {figures.envoRating}/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
+- **{figures.envoReleases} versions livrées en {figures.envoReleasePeriod}**, soit une tous les {figures.envoReleaseCadence} en moyenne, sur trois plateformes maintenues seul
 - Rythme de livraison comparable à celui d'une petite équipe
