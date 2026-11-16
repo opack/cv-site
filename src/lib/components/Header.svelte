@@ -1,5 +1,5 @@
 <script lang="ts">
-	import photo from '$lib/assets/photo.jpg'
+	import photo from '$lib/assets/photo.webp'
 	import type { Meta } from '$lib/types'
 	import { Link as LinkIcon, Mail, Phone } from '@lucide/svelte'
 
@@ -31,7 +31,7 @@
 		class="relative flex flex-col gap-6 p-8 md:flex-row md:items-center md:gap-8 md:px-8 md:py-10"
 	>
 		<div
-			class="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-white/60 bg-white/10 shadow-inner md:h-32 md:w-32"
+			class="h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-white/60 bg-teal-light shadow-inner md:h-32 md:w-32"
 		>
 			<img src={photo} alt="Portrait de {fullName}" class="h-full w-full object-cover" />
 		</div>
