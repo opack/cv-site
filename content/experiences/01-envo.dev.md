@@ -5,7 +5,8 @@ tags: [Vue.js, Quasar, TypeScript, Pinia, Vue Router, vue-i18n, Vite, Capacitor,
 ---
 
 <script>
-  import { Star } from 'lucide-svelte';
+  import { Star } from '@lucide/svelte';
+  import { figures } from '../figures';
 </script>
 
 #### Front-end Vue
@@ -49,6 +50,6 @@ tags: [Vue.js, Quasar, TypeScript, Pinia, Vue Router, vue-i18n, Vite, Capacitor,
 
 #### Résultats
 
-- **Près de 2 500 comptes créés, 4,6/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
-- **59 versions livrées en onze mois**, soit une tous les six jours en moyenne, sur trois plateformes maintenues seul
+- **Plus de {figures.envoAccounts} comptes créés, {figures.envoRating}/5 <Star class="inline-block h-[1em] w-[1em] align-[-0.15em]" aria-hidden="true" /> sur Android**
+- **{figures.envoReleases} versions livrées en {figures.envoReleasePeriod}**, soit une tous les {figures.envoReleaseCadence} en moyenne, sur trois plateformes maintenues seul
 - Rythme de livraison comparable à celui d'une petite équipe

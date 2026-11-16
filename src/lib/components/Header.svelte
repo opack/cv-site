@@ -1,7 +1,7 @@
 <script lang="ts">
 	import photo from '$lib/assets/photo.jpg'
 	import type { Meta } from '$lib/types'
-	import { Link as LinkIcon, Mail, Phone } from 'lucide-svelte'
+	import { Link as LinkIcon, Mail, Phone } from '@lucide/svelte'
 
 	type Props = { identity: Meta['identity'] }
 	let { identity }: Props = $props()

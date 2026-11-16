@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ExperienceFrontmatter } from '$lib/types'
-	import { ExternalLink } from 'lucide-svelte'
+	import { ExternalLink } from '@lucide/svelte'
 	import type { Component } from 'svelte'
 
 	type Props = {

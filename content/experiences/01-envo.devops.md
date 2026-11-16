@@ -3,6 +3,10 @@ subtitle: App de gestion de budget (iOS, Android, web). Pipeline de déploiement
 tags: [GitHub Actions, Firebase, Cloud Functions, Firebase Storage, Netlify, Capacitor, Sentry, Vitest, Claude Code]
 ---
 
+<script>
+  import { figures } from '../figures';
+</script>
+
 #### Livraison & exploitation
 
 - Pipeline de déploiement GitHub Actions vers trois environnements (development, staging, production), lancé à la demande sur une référence git
@@ -26,5 +30,5 @@ tags: [GitHub Actions, Firebase, Cloud Functions, Firebase Storage, Netlify, Cap
 
 #### Résultats
 
-- **59 versions livrées en onze mois**, soit une tous les six jours en moyenne, sur trois plateformes maintenues seul
-- Près de 2 500 comptes créés, 4,6/5 sur Android
+- **{figures.envoReleases} versions livrées en {figures.envoReleasePeriod}**, soit une tous les {figures.envoReleaseCadence} en moyenne, sur trois plateformes maintenues seul
+- Plus de {figures.envoAccounts} comptes créés, {figures.envoRating}/5 sur Android

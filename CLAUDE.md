@@ -25,7 +25,7 @@ revues et des décisions structurantes.
 2. Pour changer la présentation, éditer les composants sous `src/lib/components/`.
 3. Toute nouvelle propriété de contenu doit d'abord être ajoutée au schéma Zod
    correspondant (`src/lib/types.ts`), sous peine de rejet au build.
-4. Après modification : `npm run check && npm run build` avant commit.
+4. Après modification : `pnpm check && pnpm build` avant commit.
 
 ## Organisation du contenu
 
@@ -38,6 +38,10 @@ revues et des décisions structurantes.
   formations, diplômes, langues, hobbies.
 - `content/variants.ts` — la tranche du CV qui dépend du poste visé : titre,
   tagline, métadonnées SEO, compétences clés.
+- `content/figures.ts` — les chiffres qui évoluent (comptes, note, versions,
+  années d'expérience…) et sont cités à plusieurs endroits. Jamais en dur
+  ailleurs : interpolés dans les `.ts`, importés dans un `<script>` puis rendus
+  `{figures.xxx}` dans les `.md`.
 
 ## Variantes de CV
 
