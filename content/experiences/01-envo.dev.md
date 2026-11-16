@@ -1,5 +1,6 @@
 ---
-subtitle: App (mobile iOS & Android, web) de gestion de budget en Vue 3 / Quasar / TypeScript. Une codebase pour trois cibles, 6 langues, livraison continue sur les deux stores.
+title: Développeur fullstack Vue.js
+subtitle: "Créateur d'Envo : app (mobile iOS & Android, web) de gestion de budget en Vue 3 / Quasar / TypeScript. Une codebase pour trois cibles, 6 langues, livraison continue sur les deux stores."
 tags: [Vue.js, Quasar, TypeScript, Pinia, Vue Router, vue-i18n, Vite, Capacitor, Firebase, Sentry, Claude Code]
 ---
 
