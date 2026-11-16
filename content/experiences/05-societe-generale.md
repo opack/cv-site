@@ -2,7 +2,7 @@
 title: Technical Leader
 company: Société Générale
 dateStart: '2017-01'
-dateEnd: '2017-07'
+dateEnd: '2017-06'
 teamSize: Équipe de 8 personnes · 4 équipes à Paris et Bangalore
 subtitle: Garant de la cohérence et de la qualité des développements sur les applications de financement structuré (LoanIQ et satellites).
 tags: [Java, LoanIQ, International, Finance]
