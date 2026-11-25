@@ -317,8 +317,10 @@
 	.space-y-5 > * + * {
 		margin-top: 2.2mm !important;
 	}
-	.space-y-3 > * + * {
-		margin-top: 1.5mm !important;
+	/* Tailwind 4 espace via `margin-block-end` sur `:not(:last-child)` : on le
+	   remplace (un `margin-top` fusionnerait avec lui et resterait sans effet). */
+	.space-y-3 > :not(:last-child) {
+		margin-block-end: 2mm !important;
 	}
 	.space-y-2\.5 > * + * {
 		margin-top: 1.2mm !important;
